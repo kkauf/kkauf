@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: poslayout: ./_layouts/post
 title: Generic
 description: Lorem ipsum dolor est
-image: assets/images/pic11.jpg
+image: ./assets/images/pic11.jpg
 nav-menu: true
 ---
 
