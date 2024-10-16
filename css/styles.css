@@ -1,0 +1,129 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.fullscreen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+#welcome {
+    background-color: #f8f8f8;
+}
+
+#welcome h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+.scroll-prompt {
+    position: absolute;
+    bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroll-prompt p {
+    font-size: 1.2rem;
+    opacity: 0.6;
+    margin-bottom: 1rem;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #333;
+    opacity: 0;
+    animation: bounce 3s ease-in-out infinite;
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+}
+
+#about .content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-columns {
+    flex: 2;
+    padding-right: 2rem;
+}
+
+.image-column {
+    flex: 1;
+}
+
+.image-column img {
+    max-width: 100%;
+    height: auto;
+}
+
+#navigation {
+    background-color: #f0f0f0;
+}
+
+.nav-tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+}
+
+.tile {
+    background-color: #fff;
+    padding: 2rem;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    #about .content {
+        flex-direction: column;
+    }
+
+    .text-columns, .image-column {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .nav-tiles {
+        grid-template-columns: 1fr;
+    }
+}
