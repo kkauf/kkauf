@@ -3,10 +3,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const sections = document.querySelectorAll('.fullscreen');
     let currentSection = 0;
 
-    function showSection(index) {
-        sections[index].scrollIntoView({ behavior: 'smooth' });
+    // Function to scroll to next section
+    function scrollToNextSection() {
+        if (currentSection < sections.length - 1) {
+            currentSection++;
+            sections[currentSection].scrollIntoView({ behavior: 'smooth' });
+        }
     }
 
+    // Add click event to scroll prompt
+    const scrollPrompt = document.querySelector('.scroll-prompt');
+    if (scrollPrompt) {
+        scrollPrompt.style.cursor = 'pointer';
+        scrollPrompt.addEventListener('click', scrollToNextSection);
+    }
+
+    // Update current section on scroll
     function handleScroll() {
         const scrollPosition = window.pageYOffset;
         sections.forEach((section, index) => {
@@ -16,14 +28,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 
+    // Handle keyboard navigation
     function handleKeydown(event) {
         if (event.key === 'ArrowDown' && currentSection < sections.length - 1) {
-            showSection(currentSection + 1);
+            scrollToNextSection();
         } else if (event.key === 'ArrowUp' && currentSection > 0) {
-            showSection(currentSection - 1);
+            currentSection--;
+            sections[currentSection].scrollIntoView({ behavior: 'smooth' });
         }
     }
 
+    // Add event listeners
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('keydown', handleKeydown);
 
