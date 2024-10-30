@@ -12,6 +12,17 @@
     box-sizing: border-box;
 }
 
+/* Hide content initially for typeWriter function*/
+.hidden-until-animation {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Call with typeWriter */
+.visible {
+    opacity: 1;
+}
+
 /* Elements */
 
 html {
@@ -23,14 +34,16 @@ body {
     font-family: Arial, sans-serif;
     color: var(--text-color);
     background-color: var(--background-color);
-    max-width: 1400px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     line-height: 1.5;
     overflow-x: hidden;
 }
 
 .fullscreen {
     min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,6 +52,7 @@ body {
     text-align: left;
     scroll-snap-align: start;
     position: relative;
+    background-color: inherit;
 }
 
 h1, h2, h3 {
@@ -137,8 +151,14 @@ p {
     flex: 2;
 }
 
+.image-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .image-column img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
 }
 
