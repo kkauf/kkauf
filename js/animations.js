@@ -1,7 +1,8 @@
 // Typewriter function
 function typeWriter(element, text, speed = 50, delay = 0) {
-    element.textContent = ''; // Clear existing text
+    element.textContent = '\u200B'; // Clear existing text
     element.classList.add('typewriter');
+    element.style.opacity = '1';
     
     return new Promise(resolve => {
         setTimeout(() => {
@@ -19,46 +20,95 @@ function typeWriter(element, text, speed = 50, delay = 0) {
     });
 }
 
-// Animate welcome-section
+// Animate Welcome Section
 document.addEventListener('DOMContentLoaded', async () => {
+    // Elements
     const welcomeH1Text = document.querySelector('#welcome-h1-text');
     const welcomeH2Text = document.querySelector('#welcome-h2-text');
-    const scrollPrompt = document.querySelector('.scroll-prompt');
+    const sections = document.querySelectorAll('.fullscreen');
+    const aboutSection = document.querySelector('#about');
 
-    // Initially hide the scroll prompt
-    if (scrollPrompt) {
-        scrollPrompt.style.opacity = '0';
-        scrollPrompt.style.visibility = 'hidden';
+
+
+    // Helper function for delay
+    function delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    // Helper function to create a delay
-    const delay = (ms) => {
-        return new Promise(resolve => {
-            setTimeout(resolve, ms);
+// Hide only the welcome section's scroll prompt
+const welcomeScrollPrompt = document.querySelector('#welcome .scroll-prompt');
+if (welcomeScrollPrompt) {
+    welcomeScrollPrompt.style.opacity = '0';
+    welcomeScrollPrompt.style.visibility = 'hidden';
+}
+
+// Welcome animation
+async function animateWelcomeSection() {
+    if (welcomeH1Text && welcomeH2Text) {
+        await typeWriter(welcomeH1Text, welcomeH1Text.textContent, 100);
+        await typeWriter(welcomeH2Text, welcomeH2Text.textContent, 50);
+        
+        await delay(500);
+        
+        // Fade in only the welcome scroll prompt
+        if (welcomeScrollPrompt) {
+            welcomeScrollPrompt.style.transition = 'opacity 0.5s ease, visibility 0.5s ease';
+            welcomeScrollPrompt.style.visibility = 'visible';
+            welcomeScrollPrompt.style.opacity = '1';
+        }
+        
+        // Set up click handlers for ALL scroll prompts
+        document.querySelectorAll('.scroll-prompt').forEach(prompt => {
+            prompt.addEventListener('click', () => {
+                const currentSection = prompt.closest('.fullscreen');
+                scrollToNextSection(currentSection);
+            });
+        });
+    }
+}
+
+    // Find next section
+    function scrollToNextSection(currentSection) {
+        // Convert sections to array to find current index
+        const sectionsArray = Array.from(sections);
+        const currentIndex = sectionsArray.indexOf(currentSection);
+        
+        // If there's a next section, scroll to it
+        if (currentIndex < sectionsArray.length - 1) {
+            sectionsArray[currentIndex + 1].scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    // Scroll to next section   
+    document.querySelectorAll('.scroll-prompt').forEach(prompt => {
+        prompt.addEventListener('click', () => {
+            // Find the parent section of this scroll prompt
+            const currentSection = prompt.closest('.fullscreen');
+            scrollToNextSection(currentSection);
+        });
+    });
+
+
+    // Intersection Observer for About section
+    const observerCallback = (entries) => {
+        entries.forEach(async (entry) => {
+            if (entry.isIntersecting) {
+                // Only animate once
+                observer.unobserve(entry.target);
+                await animateAboutSection();
+            }
         });
     };
 
-    async function animateAllText() {
-        try {
-            if (welcomeH1Text && welcomeH2Text) {
-                await typeWriter(welcomeH1Text, 'Hi there!', 120);
-                await typeWriter(welcomeH2Text, "I'm Konstantin.", 120, 120);
-                
-                // Wait for 500ms
-                await delay(500);
-                
-                // Make sure this executes after the delay
-                if (scrollPrompt) {
-                    scrollPrompt.style.transition = 'opacity 0.5s ease, visibility 0.5s ease';
-                    scrollPrompt.style.visibility = 'visible';
-                    scrollPrompt.style.opacity = '1';
-                }
-            }
-        } catch (error) {
-            console.error('Animation error:', error);
-        }
+    const observer = new IntersectionObserver(observerCallback, { 
+        threshold: 0.3 
+    });
+
+    // Start observing about section
+    if (aboutSection) {
+        observer.observe(aboutSection);
     }
-    
-    // Make sure to actually call the function
-    animateAllText();
+
+    // Start welcome animation
+    await animateWelcomeSection();
 });
