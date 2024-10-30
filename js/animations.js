@@ -3,7 +3,7 @@ function typeWriter(element, text, speed = 50, delay = 0) {
     element.textContent = '\u200B'; // Clear existing text
     element.classList.add('typewriter');
     element.style.opacity = '1';
-    
+
     return new Promise(resolve => {
         setTimeout(() => {
             let i = 0;
@@ -35,44 +35,44 @@ document.addEventListener('DOMContentLoaded', async () => {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-// Hide only the welcome section's scroll prompt
-const welcomeScrollPrompt = document.querySelector('#welcome .scroll-prompt');
-if (welcomeScrollPrompt) {
-    welcomeScrollPrompt.style.opacity = '0';
-    welcomeScrollPrompt.style.visibility = 'hidden';
-}
-
-// Welcome animation
-async function animateWelcomeSection() {
-    if (welcomeH1Text && welcomeH2Text) {
-        await typeWriter(welcomeH1Text, welcomeH1Text.textContent, 100);
-        await typeWriter(welcomeH2Text, welcomeH2Text.textContent, 50);
-        
-        await delay(500);
-        
-        // Fade in only the welcome scroll prompt
-        if (welcomeScrollPrompt) {
-            welcomeScrollPrompt.style.transition = 'opacity 0.5s ease, visibility 0.5s ease';
-            welcomeScrollPrompt.style.visibility = 'visible';
-            welcomeScrollPrompt.style.opacity = '1';
-        }
-        
-        // Set up click handlers for ALL scroll prompts
-        document.querySelectorAll('.scroll-prompt').forEach(prompt => {
-            prompt.addEventListener('click', () => {
-                const currentSection = prompt.closest('.fullscreen');
-                scrollToNextSection(currentSection);
-            });
-        });
+    // Hide only the welcome section's scroll prompt
+    const welcomeScrollPrompt = document.querySelector('#welcome .scroll-prompt');
+    if (welcomeScrollPrompt) {
+        welcomeScrollPrompt.style.opacity = '0';
+        welcomeScrollPrompt.style.visibility = 'hidden';
     }
-}
+
+    // Welcome animation
+    async function animateWelcomeSection() {
+        if (welcomeH1Text && welcomeH2Text) {
+            await typeWriter(welcomeH1Text, welcomeH1Text.textContent, 100);
+            await typeWriter(welcomeH2Text, welcomeH2Text.textContent, 50);
+
+            await delay(500);
+
+            // Fade in only the welcome scroll prompt
+            if (welcomeScrollPrompt) {
+                welcomeScrollPrompt.style.transition = 'opacity 0.5s ease, visibility 0.5s ease';
+                welcomeScrollPrompt.style.visibility = 'visible';
+                welcomeScrollPrompt.style.opacity = '1';
+            }
+
+            // Set up click handlers for ALL scroll prompts
+            document.querySelectorAll('.scroll-prompt').forEach(prompt => {
+                prompt.addEventListener('click', () => {
+                    const currentSection = prompt.closest('.fullscreen');
+                    scrollToNextSection(currentSection);
+                });
+            });
+        }
+    }
 
     // Find next section
     function scrollToNextSection(currentSection) {
         // Convert sections to array to find current index
         const sectionsArray = Array.from(sections);
         const currentIndex = sectionsArray.indexOf(currentSection);
-        
+
         // If there's a next section, scroll to it
         if (currentIndex < sectionsArray.length - 1) {
             sectionsArray[currentIndex + 1].scrollIntoView({ behavior: 'smooth' });
@@ -100,8 +100,8 @@ async function animateWelcomeSection() {
         });
     };
 
-    const observer = new IntersectionObserver(observerCallback, { 
-        threshold: 0.3 
+    const observer = new IntersectionObserver(observerCallback, {
+        threshold: 0.3
     });
 
     // Start observing about section

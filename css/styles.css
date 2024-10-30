@@ -4,7 +4,7 @@
     --text-color: #1a1c20;
     --link-color: #4a76ee;
     --background-color: #eeeff1;
-  }
+}
 
 * {
     margin: 0;
@@ -28,8 +28,8 @@
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
-  }
-  
+}
+
 body {
     font-family: Arial, sans-serif;
     color: var(--text-color);
@@ -55,12 +55,14 @@ body {
     background-color: inherit;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
-h1 {    
+h1 {
     font-size: 3rem;
 }
 
@@ -71,6 +73,7 @@ h2 {
 p {
     margin-bottom: 1rem;
 }
+
 /* Welcome Section */
 
 #welcome {
@@ -121,9 +124,12 @@ p {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(10px);
     }
@@ -162,6 +168,50 @@ p {
     height: auto;
 }
 
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2rem auto;
+    gap: 3rem;  /* Space between logos */
+    padding: 2rem;
+}
+
+.logo-link {
+    /* Base size that allows 5 logos to fit comfortably */
+    flex: 0 1 150px;  /* Don't grow, can shrink, base width 150px */
+    min-width: 120px; /* Prevent logos from getting too small */
+    max-width: 180px; /* Prevent logos from getting too large */
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+    opacity: 1;
+}
+
+.logo-link img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .logo-grid {
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-grid {
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+}
 
 /* Navigation-Section */
 
@@ -188,17 +238,19 @@ p {
 
 .tile:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 
 /* Mobile responsiveness */
+
 @media (max-width: 768px) {
     #about .content {
         flex-direction: column;
-    }
+      }
 
-    .text-columns, .image-column {
+    .text-columns,
+    .image-column {
         width: 100%;
         padding: 1rem 0;
     }
