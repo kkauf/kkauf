@@ -10,8 +10,41 @@
 </head>
 
 <body>
+
+    <nav class="main-nav">
+        <div class="nav-left">
+            <a href="#welcome">Konstantin G. M. Kaufmann</a>
+        </div>
+        
+        <div class="nav-right">
+            <div class="desktop-menu">
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <!-- <a href="#life">Life</a> -->
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <button class="hamburger-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <!-- <a href="#life">Life</a> -->
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="mobile-menu-overlay"></div>
+
+
     <section id="welcome" class="fullscreen">
-        <div class="div-container"></div>
+        <div></div>
             <h1 id="welcome-h1-text" class="hidden-until-animation">Konstantin G. M. Kaufmann</h1>
             <h2 id="welcome-h2-text" class="hidden-until-animation">Product Leader, Coach, Mentor</h2>
             <div class="scroll-prompt">
@@ -49,18 +82,32 @@
             <a href="https://paleblue.vc/portfolio/hier" class="logo-link"><img src="img/hier-logo.png" alt="Hier Foods Logo"></a>
             <a hred="https://franklin-institute.de/" class="logo-link"><img src="img/Franklin-logo.png" alt="Franlin IAS Logo"></a>
         </div>
-        <!-- <div class="scroll-prompt">
-            <div class="arrow-down"></div> -->
+        <div class="scroll-prompt">
+            <div class="arrow-down"></div>
     </section>
 
-    <!-- <section id="navigation" class="fullscreen">
-        <div class="nav-tiles">
-            <a href="#life" class="tile">Life</a>
-            <a href="#work" class="tile">Work</a>
-            <a href="#about-me" class="tile">About Me</a>
-            <a href="#connect" class="tile">Connect</a>
+    <section id="work" class="fullscreen">
+        <div class="content">
+            <div class="cv-columns">
+                <h2 id="work-h2-text">Franklin Institute of Applied Sciences</h2>
+                <p>
+                    Head of Academy, Apr 2023 - Nov 2024
+                </p>
+            </div>
+            <div class="text-columns">
+                <ul>
+                   <li>Spearheaded curriculum development for a 12-month Product
+                    Management program.</li>
+                   <li>Recruited, trained, and led a team of 14 caches rated ø>8.5 by
+                    students, enhancing student outcomes and course ratings.</li>
+                   <li>Streamlined operations to support over 150 students across 10+
+                    course, setting up and continuously refining scalable processes.</li>
+            </div>
         </div>
-    </section> -->
+        <div class="scroll-prompt">
+            <div class="arrow-down"></div>
+        </div>
+    </section>
 
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>

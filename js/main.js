@@ -52,3 +52,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
         observer.observe(section);
     });
 }); 
+
+
+// Add hamburger menu functionality
+document.querySelector('.hamburger-button').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.mobile-menu').classList.toggle('active');
+    document.querySelector('.mobile-menu-overlay').classList.toggle('active');
+});
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.mobile-menu').classList.remove('active');
+        document.querySelector('.hamburger-button').classList.remove('active');
+    });
+});
