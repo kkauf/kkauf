@@ -44,18 +44,23 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Welcome animation
     async function animateWelcomeSection() {
-        if (welcomeH1Text && welcomeH2Text) {
-            await typeWriter(welcomeH1Text, welcomeH1Text.textContent, 100);
-            await typeWriter(welcomeH2Text, welcomeH2Text.textContent, 50);
-
-            await delay(500);
-
-            // Fade in only the welcome scroll prompt
-            if (welcomeScrollPrompt) {
-                welcomeScrollPrompt.style.transition = 'opacity 0.5s ease, visibility 0.5s ease';
-                welcomeScrollPrompt.style.visibility = 'visible';
-                welcomeScrollPrompt.style.opacity = '1';
-            }
+        const mainNav = document.querySelector('.main-nav');
+    
+    if (welcomeH1Text && welcomeH2Text) {
+        await typeWriter(welcomeH1Text, welcomeH1Text.textContent, 100);
+        await typeWriter(welcomeH2Text, welcomeH2Text.textContent, 50);
+        
+        await delay(500);
+        
+        // Show both scroll prompt and nav
+        if (welcomeScrollPrompt && mainNav) {
+            welcomeScrollPrompt.style.transition = 'opacity 0.5s ease, visibility 0.5s ease';
+            welcomeScrollPrompt.style.visibility = 'visible';
+            welcomeScrollPrompt.style.opacity = '1';
+            
+            mainNav.style.visibility = 'visible';
+            mainNav.style.opacity = '1';
+        }
 
             // Set up click handlers for ALL scroll prompts
             document.querySelectorAll('.scroll-prompt').forEach(prompt => {
