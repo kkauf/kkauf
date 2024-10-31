@@ -1,6 +1,6 @@
 // Typewriter function
 function typeWriter(element, text, speed = 50, delay = 0) {
-    element.textContent = '\u200B'; // Clear existing text
+    element.textContent = ''; // Clear existing text
     element.classList.add('typewriter');
     element.style.opacity = '1';
 
