@@ -83,6 +83,12 @@ p {
 #welcome h1 {
     font-size: 4rem;
     margin-bottom: 4rem;
+    height: 8rem;
+}
+
+#welcome h2 {
+    font-size: 2.5rem;
+    height: 5rem;
 }
 
 .scroll-prompt {
@@ -151,6 +157,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 2rem;
 }
 
 .image-column {
@@ -161,10 +168,11 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
 }
 
 .image-column img {
-    max-width: 70%;
+    max-width: 80%;
     height: auto;
 }
 
@@ -175,15 +183,19 @@ p {
     align-items: center;
     width: 100%;
     margin: 2rem auto;
-    gap: 3rem;  /* Space between logos */
+    gap: 3rem;
+    /* Space between logos */
     padding: 2rem;
 }
 
 .logo-link {
     /* Base size that allows 5 logos to fit comfortably */
-    flex: 0 1 150px;  /* Don't grow, can shrink, base width 150px */
-    min-width: 120px; /* Prevent logos from getting too small */
-    max-width: 180px; /* Prevent logos from getting too large */
+    flex: 0 1 150px;
+    /* Don't grow, can shrink, base width 150px */
+    min-width: 120px;
+    /* Prevent logos from getting too small */
+    max-width: 180px;
+    /* Prevent logos from getting too large */
     opacity: 0.5;
     transition: opacity 0.3s ease;
 }
@@ -204,63 +216,62 @@ p {
         gap: 2rem;
         padding: 1.5rem;
     }
-}
 
-@media (max-width: 600px) {
-    .logo-grid {
-        gap: 1.5rem;
-        padding: 1rem;
+
+    @media (max-width: 600px) {
+        .logo-grid {
+            gap: 1.5rem;
+            padding: 1rem;
+        }
     }
-}
 
-/* Navigation-Section */
+    /* Navigation-Section */
 
-#navigation {
-    background-color: #f0f0f0;
-    scroll-snap-align: start;
-}
-
-.nav-tiles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 800px;
-}
-
-.tile {
-    background-color: #fff;
-    padding: 2rem;
-    text-decoration: none;
-    color: #333;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-}
-
-.tile:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Mobile responsiveness */
-
-@media (max-width: 768px) {
-    #about .content {
-        flex-direction: column;
-      }
-
-    .text-columns,
-    .image-column {
-        width: 100%;
-        padding: 1rem 0;
+    #navigation {
+        background-color: #f0f0f0;
+        scroll-snap-align: start;
     }
 
     .nav-tiles {
-        grid-template-columns: 1fr;
-        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        max-width: 800px;
     }
 
-    #welcome h1 {
-        font-size: 2.5rem;
+    .tile {
+        background-color: #fff;
+        padding: 2rem;
+        text-decoration: none;
+        color: #333;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
     }
-}
+
+    .tile:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+
+    /* Mobile responsiveness */
+
+    @media (max-width: 768px) {
+        #about .content {
+            flex-direction: column;
+        }
+
+        .text-columns,
+        .image-column {
+            width: 100%;
+            padding: 1rem 0;
+        }
+
+        .nav-tiles {
+            grid-template-columns: 1fr;
+            padding: 1rem;
+        }
+
+        #welcome h1 {
+            font-size: 3rem;
+        }
