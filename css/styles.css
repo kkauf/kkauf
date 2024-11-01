@@ -51,9 +51,12 @@ body {
     padding: 2rem;
     text-align: left;
     scroll-snap-align: start;
-    position: relative;
     background-color: inherit;
+    box-sizing: border-box;
+    padding-top: 6rem;
+    position: relative; 
 }
+
 
 h1,
 h2,
@@ -70,26 +73,37 @@ h2 {
     font-size: 2rem;
 }
 
-p {
+p, li {
     margin-bottom: 1rem;
 }
 
+
 /* Navigation Section */
+
+.nav-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;  /* Match your content padding if any */
+}
 
 .main-nav {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem;
     background: rgba(255, 255, 255, 0.95);
     z-index: 1000;
     opacity: 0;  /* Start hidden */
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+   
 }
 .main-nav a { 
     text-decoration: none;
@@ -228,7 +242,8 @@ p {
     align-items: center;
     cursor: pointer;
     transition: opacity 0.5s ease, visibility 0.5s ease;
-
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .scroll-prompt:hover {
@@ -282,18 +297,18 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem;
+    padding: 0 2rem;
 }
 
-.image-column {
+.image-columns {
     flex: 2;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 0 2rem;
 }
 
-.image-column img {
+.image-columns img {
     max-width: 80%;
     height: auto;
 }
@@ -336,19 +351,32 @@ p {
 
 /* Work Section */
 
+.content-items {
+    width: 100%;
+    display: flex;
+    max-width: 1200px;
+    margin: 1rem auto;
+}
+
 .cv-columns {
     flex: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
-    padding-right: 2rem;
+    justify-content: top;
+    padding: 0 2rem;
+       align-self: flex-start;
 }
+
+
 
 #work.text-columns {
     flex: 3;
+    align-self: flex-start;
 }
 
+/* #work.content-items {
+    padding: 4rem;
+} */
 
 
 /* Responsive adjustments */
@@ -365,28 +393,6 @@ p {
             padding: 1rem;
         }
     }
-
-    /* Navigation-Section */
-
-    #navigation {
-        background-color: #f0f0f0;
-        scroll-snap-align: start;
-    }
-
-      .tile {
-        background-color: #fff;
-        padding: 2rem;
-        text-decoration: none;
-        color: #333;
-        font-size: 1.5rem;
-        transition: all 0.3s ease;
-    }
-
-    .tile:hover {
-        transform: scale(1.05);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
 
     /* Mobile responsiveness */
 
