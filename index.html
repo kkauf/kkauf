@@ -12,23 +12,25 @@
 <body>
 
     <nav class="main-nav">
-        <div class="nav-left">
-            <a href="#welcome">Konstantin G. M. Kaufmann</a>
-        </div>
-        
-        <div class="nav-right">
-            <div class="desktop-menu">
-                <a href="#about">About</a>
-                <a href="#work">Work</a>
-                <!-- <a href="#life">Life</a> -->
-                <a href="#contact">Contact</a>
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#welcome">Konstantin G. M. Kaufmann</a>
             </div>
             
-            <button class="hamburger-button">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-right">
+                <div class="desktop-menu">
+                    <a href="#about">About</a>
+                    <a href="#work">Work</a>
+                    <!-- <a href="#life">Life</a> -->
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <button class="hamburger-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
     
@@ -44,19 +46,22 @@
 
 
     <section id="welcome" class="fullscreen">
-        <div></div>
             <h1 id="welcome-h1-text" class="hidden-until-animation">Konstantin G. M. Kaufmann</h1>
             <h2 id="welcome-h2-text" class="hidden-until-animation">Product Leader, Coach, Mentor</h2>
             <div class="scroll-prompt">
+                <p>About</p>
                 <div class="arrow-down"></div>
             </div>
-        </div>
     </section>
 
     <section id="about" class="fullscreen">
+        <div class="content-items">
+            <div class="text-columns">
+                <h1>About</h1>
+            </div>
+        </div>
         <div class="content">
             <div class="text-columns">
-                <h2 id="about-h2-text">About</h2>
                 <p>
                     Konstantin is a driven Product Leader who loves working with complex software products, driving
                     growth and operational efficiency through data-driven strategies.
@@ -71,7 +76,7 @@
                     annually within just 4 months of implementation.
                 </p>
             </div>
-            <div class="image-column">
+            <div class="image-columns">
                 <img src="img/AI Profile Pic.jpg" alt="Konstantin G. M. Kaufmann">
             </div>
         </div>
@@ -80,28 +85,93 @@
             <a class="logo-link"><img src="img/Mendel-logo.png" alt="Mendel Foods Logo"></a>
             <a href="https://urbansportsclub.com/en" class="logo-link"><img src="img/UrbanSportsGroup-logo.png" alt="Urban Sports Group Logo"></a>
             <a href="https://paleblue.vc/portfolio/hier" class="logo-link"><img src="img/hier-logo.png" alt="Hier Foods Logo"></a>
-            <a hred="https://franklin-institute.de/" class="logo-link"><img src="img/Franklin-logo.png" alt="Franlin IAS Logo"></a>
+            <a href="https://franklin-institute.de/" class="logo-link"><img src="img/Franklin-logo.png" alt="Franlin IAS Logo"></a>
         </div>
         <div class="scroll-prompt">
+            <p>Work</p>
             <div class="arrow-down"></div>
+        </div>
     </section>
 
     <section id="work" class="fullscreen">
-        <div class="content">
+        <div class="content-items">
+            <div class="text-columns">
+                <h1>Work</h1>
+            </div>
+        </div>
+        <div class="content-items">
             <div class="cv-columns">
-                <h2 id="work-h2-text">Franklin Institute of Applied Sciences</h2>
-                <p>
-                    Head of Academy, Apr 2023 - Nov 2024
-                </p>
+                <h2>Franklin Institute of Applied Sciences</h2>
+                <h3>Head of Academy, Apr 2023 - Nov 2024</h3>
             </div>
             <div class="text-columns">
                 <ul>
-                   <li>Spearheaded curriculum development for a 12-month Product
+                    <li>Spearheaded curriculum development for a 12-month Product
                     Management program.</li>
-                   <li>Recruited, trained, and led a team of 14 caches rated ø>8.5 by
+                    <li>Recruited, trained, and led a team of 14 caches rated ø>8.5 by
                     students, enhancing student outcomes and course ratings.</li>
-                   <li>Streamlined operations to support over 150 students across 10+
+                    <li>Streamlined operations to support over 150 students across 10+
                     course, setting up and continuously refining scalable processes.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-items">
+            <div class="cv-columns">
+                <h2>Hier Foods</h2>
+                <h3>Lead Product Manager, May 2022 - Feb 2023</h3>
+            </div>
+            <div class="text-columns">
+                <ul>
+                    <li>Led customer discovery and implemented technical integrations
+                        with major enterprises via EDI. </li>
+                    <li>Managed the product roadmap, team structure, and directly
+                        oversaw the recruitment and coaching of engineers and product
+                        managers.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-items">
+            <div class="cv-columns">
+                <h2>Urban Sports Group</h2>
+                <h3>Lead Product Manager, Apr 2020 - Apr 2022</h3>
+            </div>
+            <div class="text-columns">
+                <ul>
+                    <li>Directed a team of 2 product managers and 12 software engineers,
+                        reducing payment-related fraud by over 92% (€2.2M p.a.).</li>   
+                    <li>Successfully led the migration of platform infrastructure from AWS to
+                        GCP, initiating the use of microservices.</li> 
+                    <li>Implemented OKRs and supported due diligence processes for a
+                        significant investor round.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-items">
+            <div class="cv-columns">
+                <h2>Mendel Foods</h2>
+                <h3>Co-Founder, Jun 2019 - Jan 2020</h3>
+            </div>
+            <div class="text-columns">
+                <ul>
+                    <li>Conducted field work in regenerative agriculture and in-depth
+                        product discovery to develop a viable business model.</li>
+                    <li>Achieved global Top 25 ranking in the Pioneer Tournament (by Marc Andreessen, Patrick Collison, Stephen Wolfram), securing
+                        investor interest and signing multiple B2B customer LOIs.</li>
+            </div>
+        </div>
+        <div class="content-items">
+            <div class="cv-columns">
+                <h2>N26</h2>
+                <h3>Product Owner, Apr 2017 - Apr 2019</p>
+            </div>
+            <div class="text-columns">
+                <ul>
+                    <li>Led the strategic development and management of payment teams,
+                        focusing on card lifecycle and transaction processing.</li>
+                    <li>Launched the high-profile payment options Apple Pay and Google
+                        Pay across multiple European markets.</li>
+                    <li>Facilitated N26's international expansion into the UK and US,
+                        optimizing the platform for multi-regional operations.</li>
             </div>
         </div>
         <div class="scroll-prompt">
