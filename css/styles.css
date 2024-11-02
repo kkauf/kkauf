@@ -12,6 +12,62 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'PP Neue Montreal';
+    src: url('../fonts/PPNeueMontreal-Book.woff2') format('woff2'),
+        url('../fonts/PPNeueMontreal-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Neue Montreal';
+    src: url('..fonts/PPNeueMontreal-SemiBolditalic.woff2') format('woff2'),
+        url('../fonts/PPNeueMontreal-SemiBolditalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Neue Montreal';
+    src: url('../fonts/PPNeueMontreal-Thin.woff2') format('woff2'),
+        url('../fonts/PPNeueMontreal-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Neue Montreal';
+    src: url('../fonts/PPNeueMontreal-Bold.woff2') format('woff2'),
+        url('../fonts/PPNeueMontreal-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Neue Montreal';
+    src: url('../fonts/PPNeueMontreal-Medium.woff2') format('woff2'),
+        url('../fonts/PPNeueMontreal-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Neue Montreal';
+    src: url('../fonts/PPNeueMontreal-Italic.woff2') format('woff2'),
+        url('../fonts/PPNeueMontreal-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
 /* Hide content initially for typeWriter function*/
 .hidden-until-animation {
     opacity: 0;
@@ -31,7 +87,7 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'PP Neue Montreal', Georgia, sans-serif;
     color: var(--text-color);
     background-color: var(--background-color);
     width: 100%;
@@ -111,6 +167,10 @@ p, li {
     color: #333;
 }
 
+.nav-left a:hover {
+    color: #4a76ee;
+}
+
 .nav-left, .nav-right {
     display: flex;
     align-items: center;
@@ -166,7 +226,7 @@ p, li {
         background: white;
         padding: 2rem;
         transition: right 0.3s ease;
-        z-index: 1001;  /* Higher than nav bar */
+        z-index: 1001;  /* Higher than left bar */
         ;
     }
     .mobile-menu-overlay {
@@ -270,6 +330,7 @@ p, li {
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
+
 @keyframes float {
 
     0%,
@@ -302,6 +363,7 @@ p, li {
 }
 
 .content {
+    width: 100%;
     display: flex;
     max-width: 1200px;
     margin: 1rem auto;
@@ -446,9 +508,39 @@ p, li {
             padding: 1rem 0;
         }
 
-       
-        #welcome h1 {
-            font-size: 3rem;
-        }
     }
+}
+
+/* Contact section  */
+
+#contact a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+#contact a:hover {
+    color: #4a76ee;
+    background: rgba(74, 118, 238, 0.05);
+    transform: translateY(-2px);
+}
+
+#contact p {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+}
+
+/* Optional: Add icons */
+#contact a::before {
+    content: '→';
+    margin-right: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#contact a:hover::before {
+    opacity: 1;
 }
