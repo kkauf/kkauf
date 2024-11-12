@@ -47,10 +47,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         const mainNav = document.querySelector('.main-nav');
     
     if (welcomeH1Text && welcomeH2Text) {
-        await typeWriter(welcomeH1Text, welcomeH1Text.textContent, 100);
-        await typeWriter(welcomeH2Text, welcomeH2Text.textContent, 50);
+        await typeWriter(welcomeH1Text, welcomeH1Text.textContent, 1);
+        await typeWriter(welcomeH2Text, welcomeH2Text.textContent, 1);
+        // await typeWriter(welcomeH1Text, welcomeH1Text.textContent, 100);
+        // await typeWriter(welcomeH2Text, welcomeH2Text.textContent, 50);
         
-        await delay(500);
+        // await delay(500);
+        await delay(1)
         
         // Show both scroll prompt and nav
         if (welcomeScrollPrompt && mainNav) {
