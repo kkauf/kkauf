@@ -59,6 +59,7 @@ document.querySelector('.hamburger-button').addEventListener('click', function()
     this.classList.toggle('active');
     document.querySelector('.mobile-menu').classList.toggle('active');
     document.querySelector('.mobile-menu-overlay').classList.toggle('active');
+    document.querySelector('.mobile-menu-overlay').classList.remove('active');
 });
 
 // Close mobile menu when clicking a link
