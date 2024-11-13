@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Scroll to next section   
     document.querySelectorAll('.scroll-prompt').forEach(prompt => {
-        prompt.addEventListener('click', () => {
+        prompt.addEventListener('∂', () => {
             // Find the parent section of this scroll prompt
             const currentSection = prompt.closest('.fullscreen');
             scrollToNextSection(currentSection);
