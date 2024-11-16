@@ -1,235 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FWGDF1ZTLH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FWGDF1ZTLH');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWGDF1ZTLH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FWGDF1ZTLH');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konstantin G. M. Kaufmann  - Product Leader</title>
+    <title>Konstantin G. M. Kaufmann - Product Leader</title>
+    <meta name="description" content="Konstantin is a results-oriented Product Leader skilled in complex software. Available for freelance or fractional CPO roles, he transforms teams and boosts efficiency.">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preload" href="fonts/PPNeueMontreal-Book.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/PPNeueMontreal-Medium.woff2" as="font" type="font/woff2" crossorigin>
 </head>
-
 <body>
+    <a href="#main-content" class="skip-to-main-content">Skip to main content</a>
     <header>
-    <nav class="main-nav">
-        <div class="nav-container">
-            <div class="nav-left">
-                <a href="#welcome">Konstantin G. M. Kaufmann</a>
-            </div>
-            
-            <div class="nav-right">
-                <div class="desktop-menu">
-                    <a href="#about">About</a>
-                    <a href="#work">Work</a>
-                    <a href="#contact">Contact</a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <a href="#welcome" aria-label="Home">Konstantin G. M. Kaufmann</a>
                 </div>
-                
-                <button class="hamburger-button">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div class="nav-right">
+                    <div class="desktop-menu">
+                        <a href="#about">About</a>
+                        <a href="#work">Work</a>
+                        <a href="#blog">Blog</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <button class="hamburger-button" aria-label="Toggle menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
+        </nav>
+        <div class="mobile-menu" aria-hidden="true">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
         </div>
-    </nav>
-    
-    <!-- Mobile menu overlay -->
-    <div class="mobile-menu">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
-    </div>
+        <div class="mobile-menu-overlay"></div>
+    </header>
+    <main id="main-content">
+        <section id="welcome" class="fullscreen">
+            <div class="section-container">
+                <h1 id="welcome-h1-text" class="hidden-until-animation">Welcome!</h1>
+                <h2 id="welcome-h2-text" class="hidden-until-animation">My name is Konstantin. I love to build products.</h2>
+                <div class="scroll-prompt">
+                    <div class="arrow-down"></div>
+                </div>
+            </div>
+        </section>
 
-    <div class="mobile-menu-overlay"></div>
-</header>
+        <section id="about" class="fullscreen">
+            <div class="section-container">
+                <div class="section-header">
+                    <h1>About</h1>
+                </div>
+                <div class="content-block">
+                    <div class="text-columns">
+                        <p>
+                            Konstantin is a driven Product Leader who loves working with complex software products, driving
+                            growth and operational efficiency through data-driven strategies.
+                        </p>
+                        <p>
+                            With a proven track record of building high-performing teams, he excels at fostering a culture of
+                            trust and innovation while remaining hands-on in product development. His global background and
+                            adaptability allow him to quickly navigate and thrive in diverse environments.
+                        <p>
+                            His experience spans from early-stage startups to major European tech brands like N26 and Urban
+                            Sports Club. In one initiative, he has reduced payment-related fraud by 92%, saving over €2.2M
+                            annually within just 4 months of implementation.
+                        </p>
+                    </div>
+                    <div class="image-columns">
+                        <img src="img/AI Profile Pic.jpg" alt="Konstantin G. M. Kaufmann">
+                    </div>
+                </div>
+                <div class="logo-grid">
+                    <a href="https://n26.com/en-de" class="logo-link"><img src="img/N26-logo.png" alt="N26 Logo"></a>
+                    <a href="https://kkauf.github.io/Mendel/" class="logo-link"><img src="img/Mendel-foods-logo.png" alt="Mendel Foods Logo"></a>
+                    <a href="https://urbansportsclub.com/en" class="logo-link"><img src="img/UrbanSportsGroup-logo.png" alt="Urban Sports Group Logo"></a>
+                    <a href="https://paleblue.vc/portfolio/hier" class="logo-link"><img src="img/hier-logo.png" alt="Hier Foods Logo"></a>
+                    <a href="https://franklin-institute.de/" class="logo-link"><img src="img/Franklin-logo.png" alt="Franklin IAS Logo"></a>
+                </div>
+                <div class="scroll-prompt">
+                    <div class="arrow-down"></div>
+                </div>
+            </div>
+        </section>
 
-    <section id="welcome" class="fullscreen">
-        <div class="section-container">
-            <h1 id="welcome-h1-text" class="hidden-until-animation">Welcome!</h1>
-            <h2 id="welcome-h2-text" class="hidden-until-animation">My name is Konstantin. I love to build products.</h2>
-            <div class="scroll-prompt">
-                <div class="arrow-down"></div>
+        <section id="work" class="fullscreen">
+            <div class="section-container">
+                <div class="section-header">
+                    <h1>Work</h1>
+                </div>
+                <div class="content-items-1">
+                    <div class="cv-logos">
+                        <a href="https://franklin-institute.de/" class="logo-link"><img src="img/Franklin-logo.png" alt="Franklin Institute of Applied Sciences Logo"></a>
+                    </div>
+                    <div class="text-columns">
+                        <h2>Head of Academy</h2>
+                        <h3>Apr 2023 - Nov 2024</h3>
+                        <ul>
+                            <li>Spearheaded curriculum development for a 12-month Product
+                            Management program.</li>
+                            <li>Recruited, trained, and led a team of 14 caches rated ø>8.5 by
+                            students, enhancing student outcomes and course ratings.</li>
+                            <li>Streamlined operations to support over 150 students across 10+
+                            course, setting up and continuously refining scalable processes.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-items-2">
+                    <div class="cv-logos">
+                        <a href="https://paleblue.vc/portfolio/hier" class="logo-link"><img src="img/hier-logo.png" alt="Hier Foods Logo"></a>
+                    </div>
+                    <div class="text-columns">
+                        <h2>Lead Product Manager</h2>
+                        <h3>May 2022 - Feb 2023</h3>
+                        <ul>
+                            <li>Led customer discovery and implemented technical integrations
+                                with major enterprises via EDI. </li>
+                            <li>Managed the product roadmap, team structure, and directly
+                                oversaw the recruitment and coaching of engineers and product
+                                managers.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-items-1">
+                    <div class="cv-logos">
+                        <a href="https://urbansportsclub.com/en" class="logo-link"><img src="img/UrbanSportsGroup-logo.png" alt="Urban Sports Group Logo"></a>
+                    </div>
+                    <div class="text-columns">
+                        <h2>Lead Product Manager</h2>
+                        <h3>Apr 2020 - Apr 2022</h3>
+                        <ul>
+                            <li>Directed a team of 2 product managers and 12 software engineers,
+                                reducing payment-related fraud by over 92% (€2.2M p.a.).</li>   
+                            <li>Successfully led the migration of platform infrastructure from AWS to
+                                GCP, initiating the use of microservices.</li> 
+                            <li>Implemented OKRs and supported due diligence processes for a
+                                significant investor round.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-items-2">
+                    <div class="cv-logos">
+                        <a href="" class="logo-link"><img src="img/Mendel-foods-logo.png" alt="Mendel Foods Logo"></a>
+                    </div>
+                    <div class="text-columns">
+                        <h2>Co-Founder</h2>
+                        <h3>Jun 2019 - Feb 2020</h3>
+                        <ul>
+                            <li>Conducted field work in regenerative agriculture and in-depth
+                                product discovery to develop a viable business model.</li>
+                            <li>Achieved global Top 25 ranking in the Pioneer Tournament (by Marc Andreessen, Patrick Collison, Stephen Wolfram), securing
+                                investor interest and signing multiple B2B customer LOIs.</li>
+                    </div>
+                </div>
+                <div class="content-items-1">
+                    <div class="cv-logos">
+                        <a href="https://n26.com/en-de" class="logo-link"><img src="img/N26-logo.png" alt="N26 Logo"></a>
+                    </div>
+                    <div class="text-columns">
+                        <h2>Product Owner</h2>
+                        <h3>Apr 2017 - Apr 2019</h3>
+                        <ul>
+                            <li>Led the strategic development and management of payment teams,
+                                focusing on card lifecycle and transaction processing.</li>
+                            <li>Launched the high-profile payment options Apple Pay and Google
+                                Pay across multiple European markets.</li>
+                            <li>Facilitated N26's international expansion into the UK and US,
+                                optimizing the platform for multi-regional operations.</li>
+                    </div>
+                </div>
+                <div class="scroll-prompt">
+                    <div class="arrow-down"></div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="fullscreen">
-        <div class="section-container">
-            <div class="section-header">
-                <h1>About</h1>
+        <section id="blog" class="fullscreen">
+            <div class="section-container">
+                <div class="section-header">
+                    <h1>Latest Posts</h1>
+                </div>
+                <div class="blog-grid">
+                    <!-- Blog posts will be dynamically loaded here -->
+                </div>
+                <div class="blog-nav">
+                    <a href="/blog" class="button">View All Posts</a>
+                </div>
             </div>
-        <div class="content-block">
-            <div class="text-columns">
-                <p>
-                    Konstantin is a driven Product Leader who loves working with complex software products, driving
-                    growth and operational efficiency through data-driven strategies.
-                </p>
-                <p>
-                    With a proven track record of building high-performing teams, he excels at fostering a culture of
-                    trust and innovation while remaining hands-on in product development. His global background and
-                    adaptability allow him to quickly navigate and thrive in diverse environments.
-                <p>
-                    His experience spans from early-stage startups to major European tech brands like N26 and Urban
-                    Sports Club. In one initiative, he has reduced payment-related fraud by 92%, saving over €2.2M
-                    annually within just 4 months of implementation.
-                </p>
-            </div>
-            <div class="image-columns">
-                <img src="img/AI Profile Pic.jpg" alt="Konstantin G. M. Kaufmann">
-            </div>
-        </div>
-        <div class="logo-grid">
-            <a href="https://n26.com/en-de" class="logo-link"><img src="img/N26-logo.png" alt="N26 Logo"></a>
-            <a href="https://kkauf.github.io/Mendel/" class="logo-link"><img src="img/Mendel-foods-logo.png" alt="Mendel Foods Logo"></a>
-            <a href="https://urbansportsclub.com/en" class="logo-link"><img src="img/UrbanSportsGroup-logo.png" alt="Urban Sports Group Logo"></a>
-            <a href="https://paleblue.vc/portfolio/hier" class="logo-link"><img src="img/hier-logo.png" alt="Hier Foods Logo"></a>
-            <a href="https://franklin-institute.de/" class="logo-link"><img src="img/Franklin-logo.png" alt="Franlin IAS Logo"></a>
-        </div>
-     
-     <div class="scroll-prompt">
-        <div class="arrow-down"></div>
-    </div>
-</div>
-    </section>
+        </section>
 
-    <section id="work" class="fullscreen">
-        <div class="section-container">
-            <div class="section-header">
-                <h1>Work</h1>
+        <section id="contact" class="fullscreen">
+            <div class="section-container">
+                <div class="section-header">
+                    <h1>Contact</h1>
+                </div>
+                <div class="content-items-contact">
+                    <span class="material-icons md-dark">
+                        mail_outline
+                    </span> 
+                    <p>
+                        For inquiries, please contact me at <a href="mailto:hello@kkauf.com">hello@kkauf.com</a>
+                    </p>
+                    <hr><br>
+                    <span class="material-icons md-dark">
+                        person_add
+                    </span>
+                    <p>
+                        You can also find me on <a href="https://www.linkedin.com/in/kkauf/">LinkedIn</a>
+                    </p>
+                    <hr><br>
+                    <span class="material-icons  md-dark">
+                        save_alt
+                    </span>
+                    <p>
+                        <a href="files/20241031 CV KK.pdf" download>Download my resume </a>
+                    </p>
+                </div>
             </div>
-        <div class="content-items-1">
-            <div class="cv-logos">
-                <a href="https://franklin-institute.de/" class="logo-link"><img src="img/Franklin-logo.png" alt="Franklin Institute of Applied Sciences Logo"></a>
-            </div>
-            <div class="text-columns">
-                <h2>Head of Academy</h2>
-                <h3>Apr 2023 - Nov 2024</h3>
-                <ul>
-                    <li>Spearheaded curriculum development for a 12-month Product
-                    Management program.</li>
-                    <li>Recruited, trained, and led a team of 14 caches rated ø>8.5 by
-                    students, enhancing student outcomes and course ratings.</li>
-                    <li>Streamlined operations to support over 150 students across 10+
-                    course, setting up and continuously refining scalable processes.</li>
-                </ul>
-            </div>
-
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Konstantin G. M. Kaufmann</p>
         </div>
-        <div class="content-items-2">
-            <div class="cv-logos">
-                <a href="https://paleblue.vc/portfolio/hier" class="logo-link"><img src="img/hier-logo.png" alt="Hier Foods Logo"></a>
-            </div>
-            <div class="text-columns">
-                <h2>Lead Product Manager</h2>
-                <h3>May 2022 - Feb 2023</h3>
-                <ul>
-                    <li>Led customer discovery and implemented technical integrations
-                        with major enterprises via EDI. </li>
-                    <li>Managed the product roadmap, team structure, and directly
-                        oversaw the recruitment and coaching of engineers and product
-                        managers.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="content-items-1">
-            <div class="cv-logos">
-                <a href="https://urbansportsclub.com/en" class="logo-link"><img src="img/UrbanSportsGroup-logo.png" alt="Urban Sports Group Logo"></a>
-            </div>
-            <div class="text-columns">
-                <h2>Lead Product Manager</h2>
-                <h3>Apr 2020 - Apr 2022</h3>
-                <ul>
-                    <li>Directed a team of 2 product managers and 12 software engineers,
-                        reducing payment-related fraud by over 92% (€2.2M p.a.).</li>   
-                    <li>Successfully led the migration of platform infrastructure from AWS to
-                        GCP, initiating the use of microservices.</li> 
-                    <li>Implemented OKRs and supported due diligence processes for a
-                        significant investor round.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="content-items-2">
-            <div class="cv-logos">
-                <a href="" class="logo-link"><img src="img/Mendel-foods-logo.png" alt="Mendel Foods Logo"></a>
-            </div>
-            <div class="text-columns">
-                <h2>Co-Founder</h2>
-                <h3>Jun 2019 - Feb 2020</h3>
-                <ul>
-                    <li>Conducted field work in regenerative agriculture and in-depth
-                        product discovery to develop a viable business model.</li>
-                    <li>Achieved global Top 25 ranking in the Pioneer Tournament (by Marc Andreessen, Patrick Collison, Stephen Wolfram), securing
-                        investor interest and signing multiple B2B customer LOIs.</li>
-            </div>
-        </div>
-        <div class="content-items-1">
-            <div class="cv-logos">
-                <a href="https://n26.com/en-de" class="logo-link"><img src="img/N26-logo.png" alt="N26 Logo"></a>
-            </div>
-            <div class="text-columns">
-                <h2>Product Owner</h2>
-                <h3>Apr 2017 - Apr 2019</h3>
-                <ul>
-                    <li>Led the strategic development and management of payment teams,
-                        focusing on card lifecycle and transaction processing.</li>
-                    <li>Launched the high-profile payment options Apple Pay and Google
-                        Pay across multiple European markets.</li>
-                    <li>Facilitated N26's international expansion into the UK and US,
-                        optimizing the platform for multi-regional operations.</li>
-            </div>
-            
-        </div>
-    </div>
-    <div class="scroll-prompt">
-        <div class="arrow-down"></div>
-    </div>
-    </section>
-
-    <!-- Contact section: includes emailto: hello@kkauf.com, linkedin link with logo, resume (download as PDF)   -->
-    <section id="contact" class="fullscreen">
-        <div class="section-container">
-            <div class="section-header">
-                <h1>Contact</h1>
-            </div>
-            <div class="content-items-contact">
-                <span class="material-icons md-dark">
-                    mail_outline
-                </span> 
-                <p>
-                    For inquiries, please contact me at <a href="mailto:hello@kkauf.com">hello@kkauf.com</a>
-                </p>
-                <hr><br>
-                <span class="material-icons md-dark">
-                    person_add
-                </span>
-                <p>
-                    You can also find me on <a href="https://www.linkedin.com/in/kkauf/">LinkedIn</a>
-                </p>
-                <hr><br>
-                <span class="material-icons  md-dark">
-                    save_alt
-                </span>
-                <p>
-                    Download my resume <a href="files/20241031 CV KK.pdf" download>here</a>
-                </p>
-            </div>
-        </div>
-        </div>
-    </section>
-
+    </footer>
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
 </body>
-
 </html>

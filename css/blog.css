@@ -1,0 +1,122 @@
+/* Blog specific styles */
+.blog-main {
+    max-width: 1200px;
+    margin: 6rem auto 2rem;
+    padding: 0 1rem;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.blog-header h1 {
+    margin-bottom: 1rem;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.blog-post {
+    background: var(--background-color-light);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: var(--shadow-elevation-low);
+}
+
+.blog-post:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elevation-medium);
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.post-category {
+    background: var(--link-color);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+}
+
+.blog-post h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post h2 a {
+    color: var(--text-color-dark);
+    text-decoration: none;
+}
+
+.blog-post h2 a:hover {
+    color: var(--link-color);
+}
+
+.blog-post p {
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Blog post page styles */
+.blog-post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.blog-post-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.blog-post-content article {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.blog-post-content h2 {
+    margin-top: 2.5rem;
+}
+
+.blog-post-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-main {
+        margin-top: 4rem;
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .blog-post {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    .blog-post p {
+        color: #ccc;
+    }
+    
+    .post-meta {
+        color: #999;
+    }
+}
