@@ -1,4 +1,3 @@
-
 /* general CSS */
 :root {
     --text-color-dark: #0A0D4BFF;
@@ -175,17 +174,20 @@ body {
 
 h1 {
     font-weight: 500;
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
 }
 
 h2 {
     font-weight: 200;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    line-height: 1.3;
 }
 
 h3 {
     font-weight: 200;
-    font-size: 1rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    line-height: 1.4;
 }
 
 h1,
@@ -518,7 +520,7 @@ hr {
 
 .logo-link img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -611,4 +613,36 @@ li {
 
 .content-items-contact p {
     margin: 1rem 0;
+}
+
+:focus {
+    outline: 3px solid var(--link-color);
+    outline-offset: 2px;
+}
+
+.skip-to-main-content {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: var(--background-color-light);
+    color: var(--text-color-dark);
+    text-decoration: none;
+}
+
+.skip-to-main-content:focus {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
