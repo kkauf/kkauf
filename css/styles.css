@@ -1,4 +1,3 @@
-
 /* general CSS */
 :root {
     --text-color-dark: #0A0D4BFF;
@@ -212,17 +211,22 @@ hr {
     top: 0;
     left: 0;
     right: 0;
-    background: #ffffff80;
-    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(255, 255, 255, 0.95);
     z-index: 1000;
     opacity: 0;
-    /* Start hidden */
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-weight: 100;
     margin: 0 auto;
+}
+
+@supports (backdrop-filter: blur(20px)) {
+    .main-nav {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: saturate(180%) blur(20px);
+    }
 }
 
 .main-nav a {
@@ -272,8 +276,35 @@ hr {
 
 /* Hide mobile menu by default */
 .mobile-menu {
-    display: none;
-    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 5rem;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    transition: right 0.3s ease;
+    z-index: 1001;
+}
+
+@supports (backdrop-filter: blur(20px)) {
+    .mobile-menu {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: saturate(180%) blur(20px);
+    }
+}
+
+.mobile-menu a {
+    padding: 1rem 1rem;
+    text-decoration: none;
+    color: var(--text-color-dark);
+    font-size: 1.5rem
+}
+
+.mobile-menu a:hover {
+    font-weight: normal;
 }
 
 @media (max-width: 768px) {
@@ -299,23 +330,6 @@ hr {
         transform-origin: center;
     }
 
-    .mobile-menu {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 5rem;
-        right: -100%;
-        /* Start off-screen */
-        width: 70%;
-        height: 100vh;
-        background: var(--background-color-nav);
-        padding: 2rem;
-        transition: right 0.3s ease;
-        z-index: 1001;
-        /* Higher than left bar */
-        backdrop-filter: saturate(180%) blur(20px);
-    }
-
     .mobile-menu-overlay {
         position: fixed;
         top: 0;
@@ -327,7 +341,6 @@ hr {
         visibility: hidden;
         transition: opacity 0.3s ease;
         z-index: 999;
-        /* Below menu but above other content */
     }
 
     .mobile-menu-overlay.active {
@@ -338,17 +351,6 @@ hr {
 
     .mobile-menu.active {
         right: 0;
-    }
-
-    .mobile-menu a {
-        padding: 1rem 1rem;
-        text-decoration: none;
-        color: var(--text-color-dark);
-        font-size: 1.5rem
-    }
-
-    .mobile-menu a:hover {
-        font-weight: normal;
     }
 
     /* Hamburger animation */
