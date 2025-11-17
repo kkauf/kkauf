@@ -1,3 +1,100 @@
+# kkauf.com
+
+Personal site and portfolio for Konstantin G. M. Kaufmann.
+
+This repository contains the source for the single-page marketing site at `kkauf.com`.
+
+## Overview
+
+The main site is a **vanilla HTML/CSS/JavaScript** single-page app with:
+
+- A hero section with typewriter-style intro animation
+- Scroll-snapped sections for About, Recent Work, Work (Vita), and Contact
+- Responsive layout with a mobile navigation drawer
+- Smooth scrolling between sections
+- Simple entrance animations for key content
+
+A future `/blog` section may be implemented using a modern static site generator such as Astro or Eleventy.
+
+## Features
+
+- **Single-page layout** with clearly separated sections for story, case studies, and CV
+- **Responsive design** for mobile, tablet, and desktop
+- **Accessible-ish navigation**
+  - Fixed top nav on larger screens
+  - Hamburger menu + overlay on mobile
+  - Active link highlighting as you scroll
+  - Keyboard focus outlines on nav, CTAs, and cards
+- **Typewriter hero animation** with:
+  - `prefers-reduced-motion` support (falls back to instant text)
+  - Early completion when the user scrolls or taps
+- **Contact section** with links to booking (Cal.com), email, and LinkedIn
+
+## Tech stack
+
+- **Frontend**: Plain HTML5, CSS3, vanilla JavaScript
+- **Styling**: Custom CSS (no framework), CSS variables, responsive layout via media queries
+- **Animations**: Custom keyframes and intersection observers for fade/slide-in effects
+- **Icons**: Google Material Icons
+- **Analytics**: Google Analytics (gtag.js)
+- **Blog (future)**: Planned via a static site generator such as Astro or Eleventy.
+
+## Project structure
+
+```text
+project-root/
+├── index.html          # Main single-page site
+├── css/
+│   ├── styles.css      # Layout, typography, components
+│   └── animations.css  # Reusable animation keyframes/classes
+├── js/
+│   ├── main.js         # Navigation, scroll handling, observers
+│   └── animations.js   # Hero typewriter + section animations
+├── img/                # Logos, profile image, etc.
+└── ReadME.MD           # This README
+```
+
+## Local development
+
+You can work on the main site as a static HTML/CSS/JS project. A blog can be added later using a generator such as Astro or Eleventy.
+
+### 1. Main single-page site
+
+No build step is required.
+
+Options:
+
+- Open `index.html` directly in a modern browser, **or**
+- Serve the repo with any static HTTP server, for example:
+
+```bash
+python -m http.server 8000
+# then visit http://localhost:8000
+```
+
+Changes to files in `css/` and `js/` will be reflected on refresh.
+
+## Deployment
+
+The main site can be deployed to any static host (e.g. GitHub Pages, Netlify, Vercel static export, Cloudflare Pages). Typical setup:
+
+1. Ensure `index.html`, `css/`, `js/`, and `img/` are available to your host.
+2. Point your domain (e.g. `kkauf.com`) at the deployed site.
+
+Exact steps depend on your hosting provider.
+
+## Contributing
+
+This repo is primarily for personal use, but small fixes (typos, accessibility improvements, etc.) are welcome via pull requests.
+
+## License
+
+No explicit license has been added yet. All rights reserved by the site owner unless stated otherwise.
+
+---
+
+## Legacy scaffold (original setup notes)
+
 Certainly, I can help you set up the technical skeleton for your website based on your requirements. Let's break this down into steps and create a structure that accommodates your needs.
 
 
@@ -31,7 +128,7 @@ This structure sets up your project with the following components:
    - `main.js`: For general functionality
    - `animations.js`: For animation-specific scripts
 4. `img/`: Directory for your images
-5. `blog/`: Subdirectory for your Jekyll blog
+5. `blog/`: Subdirectory reserved for a future blog (optional)
 6. `.gitignore`: To specify which files Git should ignore
 7. `README.md`: Project documentation
 
@@ -225,46 +322,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
 ```
 
 This JavaScript handles the pagination effect and shows/hides pages based on navigation.
-
-For your Jekyll blog, you'll need to set up the `_config.yml` file. Here's a basic configuration:
-
-
-
-```yaml
-# _config.yml
-title: Your Blog Title
-description: A brief description of your blog
-url: "https://yourdomain.com"
-baseurl: "/blog"
-
-# Build settings
-markdown: kramdown
-permalink: /:year/:month/:day/:title/
-plugins:
-  - jekyll-feed
-
-# Exclude from processing
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-
-```
-
-This sets up a basic Jekyll configuration for your blog.
-
-To get started:
-
-1. Set up this file structure in your project directory.
-2. Copy the provided HTML, CSS, and JavaScript into their respective files.
-3. For the blog, install Jekyll and create a new Jekyll site in the `blog/` directory.
-4. Customize the content, styles, and animations to your liking.
-5. Test your website locally to ensure everything works as expected.
-6. Use Git to version control your project and push it to a repository.
-7. Deploy your website to your hosting platform.
-
-Would you like me to explain any part of this setup in more detail or help you with the next steps?
