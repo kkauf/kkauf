@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }} | Blog | Konstantin G. M. Kaufmann</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thoughts on building digital products for health and education.">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="blog-page">
+  <header class="blog-header">
+    <nav class="main-nav">
+      <div class="nav-container">
+        <div class="nav-left">
+          <a href="/">Konstantin G. M. Kaufmann</a>
+        </div>
+        <div class="nav-right">
+          <a href="/#about">About</a>
+          <a href="/#recent-work">Recent Work</a>
+          <a href="/#work">Vita</a>
+          <a href="/#contact">Contact</a>
+          <a href="/blog/">Blog</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="blog-main">
+    <article class="blog-article">
+      <h1>{{ title }}</h1>
+      {% if date %}
+      <p class="blog-meta">{{ date | readableDate }}</p>
+      {% endif %}
+      {{ content | safe }}
+    </article>
+  </main>
+</body>
+</html>

@@ -14,7 +14,7 @@ The main site is a **vanilla HTML/CSS/JavaScript** single-page app with:
 - Smooth scrolling between sections
 - Simple entrance animations for key content
 
-A future `/blog` section may be implemented using a modern static site generator such as Astro or Eleventy.
+The `/blog` section is powered by Eleventy (11ty), a static site generator.
 
 ## Features
 
@@ -37,7 +37,7 @@ A future `/blog` section may be implemented using a modern static site generator
 - **Animations**: Custom keyframes and intersection observers for fade/slide-in effects
 - **Icons**: Google Material Icons
 - **Analytics**: Google Analytics (gtag.js)
-- **Blog (future)**: Planned via a static site generator such as Astro or Eleventy.
+- **Blog**: Eleventy (11ty) static blog under `/blog`.
 
 ## Project structure
 
@@ -51,14 +51,17 @@ project-root/
 │   ├── main.js         # Navigation, scroll handling, observers
 │   └── animations.js   # Hero typewriter + section animations
 ├── img/                # Logos, profile image, etc.
+├── blog/               # Eleventy templates and posts
+├── .eleventy.js        # Eleventy configuration
+├── package.json        # Eleventy devDependency and scripts
 └── ReadME.MD           # This README
 ```
 
 ## Local development
 
-You can work on the main site as a static HTML/CSS/JS project. A blog can be added later using a generator such as Astro or Eleventy.
+You can work on the main site as a static HTML/CSS/JS project, or run everything through Eleventy when working on the blog.
 
-### 1. Main single-page site
+### 1. Main single-page site (no build)
 
 No build step is required.
 
@@ -73,6 +76,25 @@ python -m http.server 8000
 ```
 
 Changes to files in `css/` and `js/` will be reflected on refresh.
+
+### 2. Blog (Eleventy)
+
+From the project root:
+
+```bash
+npm install        # once
+npm run dev        # Eleventy dev server (serves _site/)
+```
+
+The blog is available at `/blog`. New posts live in `blog/posts/` as Markdown files with front matter.
+
+### 3. Build
+
+To build the full static site (including blog) into `_site/`:
+
+```bash
+npm run build
+```
 
 ## Deployment
 
