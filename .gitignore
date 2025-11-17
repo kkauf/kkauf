@@ -1,2 +1,4 @@
 vendor
 .DS_Store
+_site
+node_modules

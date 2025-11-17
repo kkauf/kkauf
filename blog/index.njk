@@ -1,0 +1,18 @@
+---
+layout: layouts/post.njk
+title: Blog
+permalink: /blog/
+---
+
+<p>Writing on building digital products for health and education, and the craft of product leadership.</p>
+
+<ul class="blog-list">
+  {% for post in collections.post | reverse %}
+  <li class="blog-list-item">
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    {% if post.date %}
+    <span class="blog-list-date">{{ post.date | readableDate }}</span>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
