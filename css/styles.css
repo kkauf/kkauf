@@ -177,6 +177,7 @@ body.menu-open {
     text-align: left;
     scroll-snap-align: start;
     padding-top: 4rem;
+    padding-bottom: 4rem;
     position: relative;
     margin: 1rem 0;
     background-color: var(--background-color-light);
@@ -195,6 +196,7 @@ body.menu-open {
     padding: 1rem;
     margin-bottom: 2rem;
     flex: 1;
+    position: relative;
 }
 
 @media (min-width: 40em) {
@@ -203,7 +205,7 @@ body.menu-open {
     }
 
     .fullscreen > .section-container {
-        padding-bottom: 7rem;
+        padding-bottom: 0!important;
     }
 }
 
@@ -502,19 +504,15 @@ hr {
 }
 
 .scroll-prompt {
-    position: absolute;
-    bottom: 3rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    margin-bottom: 0.5rem;
+    margin-top: auto;
     opacity: 0.7;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
     transition: opacity 0.5s ease, visibility 0.5s ease;
-    left: 50%;
-    transform: translateX(-50%);
     padding: 0.75rem 1.25rem;
     min-width: 44px;
     min-height: 44px;
@@ -542,10 +540,6 @@ hr {
 
 @media (max-width: 40rem) {
     .scroll-prompt {
-        position: static;
-        bottom: auto;
-        left: auto;
-        transform: none;
         margin-top: 1.5rem;
     }
 }
@@ -884,11 +878,11 @@ li {
 }
 
 #recent-work .section-container {
-    padding-bottom: 5rem;
+    padding-bottom: 0;
 }
 
 #recent-work .scroll-prompt {
-    bottom: 4.5rem;
+    margin-top: 1.5rem;
 }
 
 /* Contact section  */

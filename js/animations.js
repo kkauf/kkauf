@@ -82,6 +82,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const aboutSection = document.querySelector('#about');
     const heroCta = document.querySelector('#welcome .availability-cta');
 
+    const isMobileViewport = window.matchMedia && window.matchMedia('(max-width: 600px)').matches;
+    if (isMobileViewport) {
+        typewriterSkip = true;
+    }
+
     // Allow users to complete the typewriter animation quickly on interaction
     let initialScrollY = window.scrollY || 0;
     const scrollThreshold = 80;
