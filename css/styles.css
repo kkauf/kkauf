@@ -131,6 +131,26 @@
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
+    scroll-padding-top: 5rem;
+}
+
+@media (max-width: 59.9375em) {
+    html {
+        scroll-snap-type: none;
+    }
+}
+
+@media (min-width: 60em) {
+    html {
+        scroll-snap-type: y mandatory;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+        scroll-snap-type: none;
+    }
 }
 
 body {
@@ -180,6 +200,10 @@ body.menu-open {
 @media (min-width: 40em) {
     .section-container, .nav-container {
         padding: 1rem 2rem!important;
+    }
+
+    .fullscreen > .section-container {
+        padding-bottom: 7rem;
     }
 }
 
