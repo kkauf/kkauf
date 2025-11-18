@@ -14,32 +14,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     function showSection(index) {
-        sections[index].scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function handleScroll() {
-        const scrollPosition = window.pageYOffset;
-        sections.forEach((section, index) => {
-            if (scrollPosition >= section.offsetTop - window.innerHeight / 2) {
-                currentSection = index;
-            }
-        });
-
-        const activeSection = sections[currentSection];
-        if (activeSection && activeSection.id) {
-            setActiveNavLink(activeSection.id);
-        }
+        if (index < 0 || index >= sections.length) return;
+        sections[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     function handleKeydown(event) {
-        if (event.key === 'ArrowDown' && currentSection < sections.length - 1) {
+        const activeElement = document.activeElement;
+        const tagName = activeElement ? activeElement.tagName.toLowerCase() : '';
+        const isTextInput = tagName === 'input' || tagName === 'textarea' || (activeElement && activeElement.isContentEditable);
+
+        if (isTextInput) {
+            return;
+        }
+
+        if ((event.key === 'ArrowDown' || event.key === 'PageDown') && currentSection < sections.length - 1) {
+            event.preventDefault();
             showSection(currentSection + 1);
-        } else if (event.key === 'ArrowUp' && currentSection > 0) {
+        } else if ((event.key === 'ArrowUp' || event.key === 'PageUp') && currentSection > 0) {
+            event.preventDefault();
             showSection(currentSection - 1);
         }
     }
 
-    window.addEventListener('scroll', handleScroll);
     window.addEventListener('keydown', handleKeydown);
 
     // Smooth scroll for navigation tiles
@@ -65,6 +61,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     sections.forEach(section => {
         observer.observe(section);
+    });
+
+    const activeSectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const section = entry.target;
+                const index = Array.prototype.indexOf.call(sections, section);
+                if (index !== -1) {
+                    currentSection = index;
+                }
+                if (section.id) {
+                    setActiveNavLink(section.id);
+                }
+            }
+        });
+    }, { threshold: 0.6 });
+
+    sections.forEach(section => {
+        activeSectionObserver.observe(section);
     });
 
     if (sections.length) {
