@@ -2,15 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FWGDF1ZTLH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-FWGDF1ZTLH');
-
-</script>
+    <!-- Google tag (gtag.js) moved to footer -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konstantin G. M. Kaufmann  - Product Leader</title>
@@ -20,7 +12,7 @@
     <link rel="preload" href="/fonts/PPNeueMontreal-Book.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
 
 <body>
@@ -102,15 +94,15 @@
                 </p>
             </div>
             <div class="image-columns">
-                <img src="img/AI Profile Pic.jpg" alt="Konstantin G. M. Kaufmann" loading="lazy" decoding="async">
+                {% image "img/AI Profile Pic.jpg", "Konstantin G. M. Kaufmann", "(min-width: 40em) 400px, 100vw", [400, 800, 1200] %}
             </div>
         </div>
         <div class="logo-grid">
-            <a href="https://n26.com/en-de" class="logo-link"><img src="img/N26-logo.png" alt="N26 Logo" loading="lazy" decoding="async"></a>
-            <a href="https://kkauf.github.io/Mendel/" class="logo-link"><img src="img/Mendel-foods-logo.png" alt="Mendel Foods Logo" loading="lazy" decoding="async"></a>
-            <a href="https://urbansportsclub.com/en" class="logo-link"><img src="img/UrbanSportsGroup-logo.png" alt="Urban Sports Group Logo" loading="lazy" decoding="async"></a>
-            <a href="https://paleblue.vc/portfolio/hier" class="logo-link"><img src="img/hier-logo.png" alt="Hier Foods Logo" loading="lazy" decoding="async"></a>
-            <a href="https://franklin-institute.de/" class="logo-link"><img src="img/Franklin-logo.png" alt="Franlin IAS Logo" loading="lazy" decoding="async"></a>
+            <a href="https://n26.com/en-de" class="logo-link">{% image "img/N26-logo.png", "N26 Logo", "150px", [150, 300] %}</a>
+            <a href="https://kkauf.github.io/Mendel/" class="logo-link">{% image "img/Mendel-foods-logo.png", "Mendel Foods Logo", "150px", [150, 300] %}</a>
+            <a href="https://urbansportsclub.com/en" class="logo-link">{% image "img/UrbanSportsGroup-logo.png", "Urban Sports Group Logo", "150px", [150, 300] %}</a>
+            <a href="https://paleblue.vc/portfolio/hier" class="logo-link">{% image "img/hier-logo.png", "Hier Foods Logo", "150px", [150, 300] %}</a>
+            <a href="https://franklin-institute.de/" class="logo-link">{% image "img/Franklin-logo.png", "Franlin IAS Logo", "150px", [150, 300] %}</a>
         </div>
      
      <button class="scroll-prompt" type="button" aria-label="Scroll to next section">
@@ -126,7 +118,7 @@
             </div>
             <div class="content-items-1 recent-work-item">
                 <div class="cv-logos">
-                    <a href="https://kaufmann-health.de" class="logo-link" target="_blank" rel="noopener"><img src="img/Kaufmann_health_logo_large.png" alt="Kaufmann Health Logo" loading="lazy" decoding="async"></a>
+                    <a href="https://kaufmann-health.de" class="logo-link" target="_blank" rel="noopener">{% image "img/Kaufmann_health_logo_large.png", "Kaufmann Health Logo", "(min-width: 40em) 300px, 100vw", [300, 600, 900] %}</a>
                 </div>
                 <div class="text-columns">
                     <h2>Kaufmann Health – Therapy Marketplace Platform</h2>
@@ -140,7 +132,7 @@
             </div>
             <div class="content-items-2 recent-work-item">
                 <div class="cv-logos">
-                    <a href="" class="logo-link"><img src="img/kampschulte.png" alt="Kampschulte Logo" loading="lazy" decoding="async"></a>
+                    <a href="" class="logo-link">{% image "img/kampschulte.png", "Kampschulte Logo", "(min-width: 40em) 300px, 100vw", [300, 600] %}</a>
                 </div>
                 <div class="text-columns">
                     <h2>Health Practitioner Digitization</h2>
@@ -176,7 +168,7 @@
             </div>
         <div class="content-items-1">
             <div class="cv-logos">
-                <a href="https://franklin-institute.de/" class="logo-link"><img src="img/Franklin-logo.png" alt="Franklin Institute of Applied Sciences Logo" loading="lazy" decoding="async"></a>
+                <a href="https://franklin-institute.de/" class="logo-link">{% image "img/Franklin-logo.png", "Franklin Institute of Applied Sciences Logo", "100px", [150, 300] %}</a>
             </div>
             <div class="text-columns">
                 <h2>Head of Academy</h2>
@@ -194,7 +186,7 @@
         </div>
         <div class="content-items-2">
             <div class="cv-logos">
-                <a href="https://paleblue.vc/portfolio/hier" class="logo-link"><img src="img/hier-logo.png" alt="Hier Foods Logo" loading="lazy" decoding="async"></a>
+                <a href="https://paleblue.vc/portfolio/hier" class="logo-link">{% image "img/hier-logo.png", "Hier Foods Logo", "100px", [150, 300] %}</a>
             </div>
             <div class="text-columns">
                 <h2>Lead Product Manager</h2>
@@ -210,7 +202,7 @@
         </div>
         <div class="content-items-1">
             <div class="cv-logos">
-                <a href="https://urbansportsclub.com/en" class="logo-link"><img src="img/UrbanSportsGroup-logo.png" alt="Urban Sports Group Logo"></a>
+                <a href="https://urbansportsclub.com/en" class="logo-link">{% image "img/UrbanSportsGroup-logo.png", "Urban Sports Group Logo", "100px", [150, 300] %}</a>
             </div>
             <div class="text-columns">
                 <h2>Lead Product Manager</h2>
@@ -227,7 +219,7 @@
         </div>
         <div class="content-items-2">
             <div class="cv-logos">
-                <a href="" class="logo-link"><img src="img/Mendel-foods-logo.png" alt="Mendel Foods Logo"></a>
+                <a href="" class="logo-link">{% image "img/Mendel-foods-logo.png", "Mendel Foods Logo", "100px", [150, 300] %}</a>
             </div>
             <div class="text-columns">
                 <h2>Co-Founder</h2>
@@ -241,7 +233,7 @@
         </div>
         <div class="content-items-1">
             <div class="cv-logos">
-                <a href="https://n26.com/en-de" class="logo-link"><img src="img/N26-logo.png" alt="N26 Logo" loading="lazy" decoding="async"></a>
+                <a href="https://n26.com/en-de" class="logo-link">{% image "img/N26-logo.png", "N26 Logo", "100px", [150, 300] %}</a>
             </div>
             <div class="text-columns">
                 <h2>Product Owner</h2>
@@ -323,6 +315,14 @@
 
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWGDF1ZTLH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FWGDF1ZTLH');
+    </script>
 </body>
 
 </html>

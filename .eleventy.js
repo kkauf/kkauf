@@ -1,4 +1,26 @@
+const Image = require("@11ty/eleventy-img");
+
+async function imageShortcode(src, alt, sizes = "100vw", widths = [400, 800, 1200], classes = "") {
+  let metadata = await Image(src, {
+    widths: widths,
+    formats: ["webp", "jpeg"],
+    outputDir: "./_site/img/",
+    urlPath: "/img/"
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    class: classes,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  return Image.generateHTML(metadata, imageAttributes);
+}
+
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("img");
