@@ -448,8 +448,8 @@ hr {
     background-color: #fcfcfc;
     box-shadow: var(--shadow-elevation-medium);
     border: 1px solid rgba(10, 13, 75, 0.08);
-    min-height: 15rem;
-    margin: 0 auto;
+    min-height: 22rem;
+    margin: 4rem auto 0;
 }
 
 #welcome .availability-cta {
@@ -483,6 +483,16 @@ hr {
 
 #welcome h2 {
     margin-top: 0.5rem;
+}
+
+.welcome-spinner {
+    display: block;
+    min-height: 1.6em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-left: 1.5rem;
+    opacity: 0.8;
 }
 
 .welcome-line {
