@@ -39,13 +39,12 @@ function typeWriter(element, text, speed = 50, delay = 0) {
     return new Promise(resolve => {
         setTimeout(() => {
             let i = 0;
-            const timer = setInterval(() => {
+
+            const step = () => {
                 if (typewriterSkip) {
-                    // Immediately reveal any remaining characters
                     for (; i < chars.length; i++) {
                         chars[i].style.opacity = '1';
                     }
-                    clearInterval(timer);
                     element.classList.remove('typewriter');
                     if (cursor && cursor.parentNode === element) {
                         element.removeChild(cursor);
@@ -55,18 +54,26 @@ function typeWriter(element, text, speed = 50, delay = 0) {
                 }
 
                 if (i < chars.length) {
-                    // Step-wise appearance: no fade, just like typing
                     chars[i].style.opacity = '1';
+                    const currentChar = fullText.charAt(i);
                     i++;
+
+                    let nextDelay = speed;
+                    if (/[.:!?]/.test(currentChar)) {
+                        nextDelay = speed * 18;
+                    }
+
+                    setTimeout(step, nextDelay);
                 } else {
-                    clearInterval(timer);
                     element.classList.remove('typewriter');
                     if (cursor && cursor.parentNode === element) {
                         element.removeChild(cursor);
                     }
                     resolve();
                 }
-            }, speed);
+            };
+
+            step();
         }, delay);
     });
 }
@@ -81,11 +88,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const sections = document.querySelectorAll('.fullscreen');
     const aboutSection = document.querySelector('#about');
     const heroCta = document.querySelector('#welcome .availability-cta');
-
-    const isMobileViewport = window.matchMedia && window.matchMedia('(max-width: 600px)').matches;
-    if (isMobileViewport) {
-        typewriterSkip = true;
-    }
 
     // Allow users to complete the typewriter animation quickly on interaction
     let initialScrollY = window.scrollY || 0;
@@ -132,13 +134,36 @@ document.addEventListener('DOMContentLoaded', async () => {
         const mainNav = document.querySelector('.main-nav');
 
         if (welcomeH1Text) {
-            const h1Text = welcomeH1Text.textContent;
             const line1Text = welcomeLine1 ? welcomeLine1.textContent : '';
             const line2Text = welcomeLine2 ? welcomeLine2.textContent : '';
             const line3Text = welcomeLine3 ? welcomeLine3.textContent : '';
 
-            // Slightly faster overall typing while keeping a calm first sentence
-            await typeWriter(welcomeH1Text, h1Text, 20);
+            const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            if (!prefersReducedMotion) {
+                const spinner = document.getElementById('welcome-spinner') || document.querySelector('#welcome .welcome-spinner');
+
+                if (spinner) {
+                    spinner.setAttribute('aria-hidden', 'true');
+
+                    const frames = ['/', '-', '\\', '|'];
+                    let frameIndex = 0;
+
+                    const updateSpinner = () => {
+                        spinner.textContent = '> ' + frames[frameIndex];
+                        frameIndex = (frameIndex + 1) % frames.length;
+                    };
+
+                    updateSpinner();
+                    const spinnerInterval = setInterval(updateSpinner, 150);
+
+                    await delay(1500);
+
+                    clearInterval(spinnerInterval);
+                    spinner.textContent = '';
+                }
+            }
+
             if (welcomeLine1) {
                 await typeWriter(welcomeLine1, line1Text, 15, 200);
             }

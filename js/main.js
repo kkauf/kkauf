@@ -60,7 +60,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }, { threshold: 0.1 });
 
     sections.forEach(section => {
-        observer.observe(section);
+        if (section.id !== 'welcome') {
+            observer.observe(section);
+        }
     });
 
     const activeSectionObserver = new IntersectionObserver((entries) => {
