@@ -3,7 +3,6 @@ title: How NOT to launch a product (A PM's perspective)
 layout: layouts/post.njk
 tags: post
 date: 2025-11-19
-permalink: "/blog/how-not-to-launch-a-product/"
 ---
 
 # How NOT to launch a product (A PM's perspective)
