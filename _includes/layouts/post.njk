@@ -14,26 +14,45 @@
     <nav class="main-nav">
       <div class="nav-container">
         <div class="nav-left">
-          <a href="/">Konstantin G. M. Kaufmann</a>
+          <a href="/#welcome">Konstantin G. M. Kaufmann</a>
         </div>
         <div class="nav-right">
-          <a href="/#about">About</a>
-          <a href="/#recent-work">Recent Work</a>
-          <a href="/#work">Vita</a>
-          <a href="/#contact">Contact</a>
-          <a href="/blog/">Blog</a>
+          <div class="desktop-menu">
+            <a href="/#about">About</a>
+            <a href="/#recent-work">Recent Work</a>
+            <a href="/#work">Vita</a>
+            <a href="/#contact">Contact</a>
+            <a href="/blog/" class="active">Blog</a>
+          </div>
+          <button class="hamburger-button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
     </nav>
+
+    <div class="mobile-menu">
+      <a href="/#about">About</a>
+      <a href="/#recent-work">Recent Work</a>
+      <a href="/#work">Vita</a>
+      <a href="/#contact">Contact</a>
+      <a href="/blog/" class="active">Blog</a>
+    </div>
+
+    <div class="mobile-menu-overlay"></div>
   </header>
   <main class="blog-main">
     <article class="blog-article">
+      <a href="/blog/" class="blog-back-link">← Back to blog</a>
       <h1>{{ title }}</h1>
       {% if date %}
-      <p class="blog-meta">{{ date | readableDate }}</p>
+      <p class="blog-meta"><time>{{ date | readableDate }}</time></p>
       {% endif %}
       {{ content | safe }}
     </article>
   </main>
+  <script src="/js/main.js"></script>
 </body>
 </html>
