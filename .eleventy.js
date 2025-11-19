@@ -34,6 +34,16 @@ module.exports = function (eleventyConfig) {
     return date.toISOString().slice(0, 10);
   });
 
+  eleventyConfig.addFilter("decodeEntities", (str) => {
+    if (!str) return "";
+    return String(str)
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .replace(/&amp;/g, "&")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">");
+  });
+
   return {
     dir: {
       input: ".",
