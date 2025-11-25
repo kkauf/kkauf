@@ -633,6 +633,10 @@ hr {
 .image-columns img {
     max-height: 42vh;
     max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
 }
 
 @media (min-width: 40em) {
