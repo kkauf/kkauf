@@ -4,7 +4,31 @@
   <meta charset="UTF-8">
   <title>{{ title }} | Blog | Konstantin G. M. Kaufmann</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Thoughts on building digital products for health and education.">
+  {% set metaDescription = description or "Thoughts on building digital products for health and education, and the craft of product leadership." %}
+  <meta name="description" content="{{ metaDescription }}">
+  {% if site and site.url %}
+  {% if tags and 'post' in tags %}
+    {% set ogType = 'article' %}
+  {% else %}
+    {% set ogType = 'website' %}
+  {% endif %}
+  {% set canonicalUrl = site.url ~ page.url %}
+  {% set socialImagePath = socialImage or (content | firstImageSrc) or site.defaultSocialImage %}
+  <link rel="canonical" href="{{ canonicalUrl }}">
+  <meta property="og:type" content="{{ ogType }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ metaDescription }}">
+  <meta property="og:url" content="{{ canonicalUrl }}">
+  {% if socialImagePath %}
+  <meta property="og:image" content="{{ site.url }}{{ socialImagePath }}">
+  {% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ metaDescription }}">
+  {% if socialImagePath %}
+  <meta name="twitter:image" content="{{ site.url }}{{ socialImagePath }}">
+  {% endif %}
+  {% endif %}
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/animations.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

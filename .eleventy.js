@@ -44,6 +44,12 @@ module.exports = function (eleventyConfig) {
       .replace(/&gt;/g, ">");
   });
 
+  eleventyConfig.addFilter("firstImageSrc", (content) => {
+    if (!content) return "";
+    const match = String(content).match(/<img[^>]+src=\"([^\"]+)\"/i);
+    return match ? match[1] : "";
+  });
+
   return {
     dir: {
       input: ".",

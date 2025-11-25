@@ -3,6 +3,7 @@ title: How NOT to launch a product (A PM's perspective)
 layout: layouts/post.njk
 tags: post
 date: 2025-11-19
+description: "A product manager's take on Google Antigravity's chaotic launch, quota limits, and what it reveals about building products in the age of AI."
 ---
 
 Yesterday, I was genuinely excited when Gemini 3 Pro ("Preview") dropped.
