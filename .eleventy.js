@@ -26,6 +26,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("files");
+  eleventyConfig.addPassthroughCopy("favicon.svg");
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     if (!dateObj) return "";
