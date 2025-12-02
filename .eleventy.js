@@ -1,4 +1,6 @@
 const Image = require("@11ty/eleventy-img");
+const path = require("path");
+const fs = require("fs");
 
 async function imageShortcode(src, alt, sizes = "100vw", widths = [400, 800, 1200], classes = "") {
   let metadata = await Image(src, {
@@ -21,6 +23,67 @@ async function imageShortcode(src, alt, sizes = "100vw", widths = [400, 800, 120
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+
+  // Custom markdown-it plugin to transform markdown images to optimized images
+  eleventyConfig.amendLibrary("md", (mdLib) => {
+    const defaultImageRender = mdLib.renderer.rules.image || function(tokens, idx, options, env, self) {
+      return self.renderToken(tokens, idx, options);
+    };
+
+    mdLib.renderer.rules.image = function(tokens, idx, options, env, self) {
+      const token = tokens[idx];
+      const src = token.attrGet("src");
+      const alt = token.content || "";
+
+      // Skip external URLs
+      if (src && (src.startsWith("http://") || src.startsWith("https://"))) {
+        return defaultImageRender(tokens, idx, options, env, self);
+      }
+
+      // Resolve the image path relative to the current page
+      if (src && env && env.page && env.page.inputPath) {
+        const pageDir = path.dirname(env.page.inputPath);
+        // Decode URL-encoded characters (e.g., %20 -> space)
+        const decodedSrc = decodeURIComponent(src);
+        const imagePath = path.join(pageDir, decodedSrc);
+        
+        // Check if the image exists
+        if (fs.existsSync(imagePath)) {
+          try {
+            // Use synchronous image processing
+            const metadata = Image.statsSync(imagePath, {
+              widths: [600, 900, 1200],
+              formats: ["webp", "jpeg"],
+              outputDir: "./_site/img/",
+              urlPath: "/img/"
+            });
+            
+            // Queue the image for processing (async but we don't wait)
+            Image(imagePath, {
+              widths: [600, 900, 1200],
+              formats: ["webp", "jpeg"],
+              outputDir: "./_site/img/",
+              urlPath: "/img/"
+            });
+
+            const imageAttributes = {
+              alt,
+              sizes: "(min-width: 40em) 720px, 100vw",
+              loading: "lazy",
+              decoding: "async",
+            };
+
+            return Image.generateHTML(metadata, imageAttributes);
+          } catch (e) {
+            console.warn(`Warning: Could not process image ${imagePath}:`, e.message);
+          }
+        }
+      }
+
+      // Fallback to default rendering
+      return defaultImageRender(tokens, idx, options, env, self);
+    };
+  });
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("img");
@@ -58,6 +121,8 @@ module.exports = function (eleventyConfig) {
     },
     templateFormats: ["njk", "md", "html"],
     htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk"
+    markdownTemplateEngine: "njk",
+    // Enable directory-based data files for post folders
+    dataTemplateEngine: "njk"
   };
 };
