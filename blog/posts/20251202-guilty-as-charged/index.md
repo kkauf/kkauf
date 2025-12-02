@@ -3,7 +3,7 @@ title: Guilty as charged
 layout: layouts/post.njk
 tags: post
 date: 2025-12-02
-description: "TO DO"
+description: "I've been using AI to improve my writing. But should I? Or does it take away from the character and joy of writing?"
 ---
 
 Real talk here: **how much have you been using AI for lately?** 
