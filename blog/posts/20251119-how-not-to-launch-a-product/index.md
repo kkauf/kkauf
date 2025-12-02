@@ -13,7 +13,7 @@ The last few iterations of LLMs have been overly focused on coding as a siloed s
 > "So we really see coding as a very fundamental skill for an agent that's going to have a lot of spillover effect to be able to make Claude great at all sorts of things. And sort of like train on the hardest thing first and then everything else will become easy."
 
 Gemini 3 actually pulled that exact quote for me from the video source:  
-{% image "blog/posts/Screenshot 2025-11-19 at 09.07.10.png", "Screenshot from Gemini 3 showing the Erik Schluntz quote", "(min-width: 40em) 720px, 100vw", [600, 900, 1200] %}
+{% image "blog/posts/20251119-how-not-to-launch-a-product/Screenshot 2025-11-19 at 09.07.10.png", "Screenshot from Gemini 3 showing the Erik Schluntz quote", "(min-width: 40em) 720px, 100vw", [600, 900, 1200] %}
 
 It’s amazing where we are now. We finally have a model that has graduated beyond just coding—which, let's be honest, was mostly just structured regurgitation of patterns—into a true reasoning frontier.
 
@@ -40,7 +40,7 @@ It started with a complete "shadow drop"—overshadowed entirely by the Gemini 3
 When I finally got access, I ignored the UI glitches (which were severe) because the core engine was singing. I was converting a project from React to NextJS, and Gemini 3 was handling the refactoring, running tests, and fixing errors autonomously. It was the "3 days to 3 hours" promise coming true.
 
 And then, this message appeared:  
-{% image "blog/posts/Pasted image 20251119092148.png", "Quota limit exceeded error message screenshot", "(min-width: 40em) 720px, 100vw", [600, 900, 1200] %}
+{% image "blog/posts/20251119-how-not-to-launch-a-product/Pasted image 20251119092148.png", "Quota limit exceeded error message screenshot", "(min-width: 40em) 720px, 100vw", [600, 900, 1200] %}
 
 ## The Dead End
 "Model quota limit exceeded."
@@ -48,7 +48,7 @@ And then, this message appeared:
 I’m a product person. I understand unit economics. I am happy to pay for value. I went immediately to the upgrade page, credit card in hand, ready to buy a Team or Pro plan.
 
 And that is when I found the critical failure in this launch:  
-{% image "blog/posts/Screenshot 2025-11-19 at 09.22.35.png", "Antigravity pricing page screenshot showing no paid plans", "(min-width: 40em) 720px, 100vw", [600, 900, 1200] %}
+{% image "blog/posts/20251119-how-not-to-launch-a-product/Screenshot 2025-11-19 at 09.22.35.png", "Antigravity pricing page screenshot showing no paid plans", "(min-width: 40em) 720px, 100vw", [600, 900, 1200] %}
 
 The Antigravity team decided to launch without any payments integration.
 

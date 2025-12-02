@@ -24,7 +24,7 @@ We are currently living through a chaotic timeline:
 2. **ChatGPT 5.1** arrives (with so many "o-series" variations that I’ve lost track of which one is for reasoning and which is for speed, not to mention Codex variants and Max versions).
 3. **Claude Opus 4.5** releases and seemingly reclaims the coding throne.
 
-{% image "blog/posts/52303b11db76017fd0c2f73c7fafa5c752515979-2600x2236.webp", "Chart comparing AI model capabilities", "(min-width: 40em) 720px, 100vw", [600, 900, 1200] %}
+{% image "blog/posts/20251126-the-frontier-shifts-again/52303b11db76017fd0c2f73c7fafa5c752515979-2600x2236.webp", "Chart comparing AI model capabilities", "(min-width: 40em) 720px, 100vw", [600, 900, 1200] %}
 
 The fatal flaw of Google Antigravity is that it tethers you to the Google ecosystem. Sure, they currently let you toggle on Claude Sonnet, but let’s be real: Google will always optimize the UX for Gemini. They have no incentive to make their competitors shine.
 

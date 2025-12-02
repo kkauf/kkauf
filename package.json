@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "eleventy --serve",
-    "build": "eleventy && node minify-assets.js"
+    "build": "eleventy && node minify-assets.js",
+    "reorganize-posts": "node scripts/reorganize-posts.js",
+    "publish": "node scripts/reorganize-posts.js && git add . && git commit -m \"Add post $(date +%Y-%m-%d)\" && git push"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",

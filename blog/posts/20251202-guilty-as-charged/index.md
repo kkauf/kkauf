@@ -22,7 +22,9 @@ But it does take away from the character of my writing, does it not? To have the
 
 **I've had imposter syndrome all my life**, and learned to use it as a superpower. I've learned to love that feeling of discomfort when I face an unknown challenge, when I do something for the first time. In fact, I've recently discovered I likely feel *best* in the face of fear. Unintuitive, I know, that's why it took me 30-odd years to discover. But I've been writing about it in personal journals for years. 
 
-I refer to that feeling as cliff jumping. And I want to do it all my life. Why cliff jumping?![Cliff jumping](Cliff jumping.jpeg)
+I refer to that feeling as cliff jumping. And I want to do it all my life. Why cliff jumping?
+
+![Cliff jumping](Cliff jumping.jpeg)
 
 **Picture this:** you're standing atop of a cliff, rocks and some fauna at your feet, looking down at the dark blue sea. And you're about to jump. It's high, very high, you can't really gauge just how high without getting dizzy. But your friend jumps, and you know you can do it too. So you jump! You take the leap. And the thrill drives a bolt of lightning through your heart as you're about to touch the surface. And then it's all over again as the water crashes over your head and cloggs up your ears and nose.
 
@@ -36,7 +38,9 @@ People are all of a sudden jumping those cliffs with mecha suits or virtually li
 
 But good? Authentic? Real? 
 
-**Might you need the skin in the game after all?!**![Skin in the game](Skin in the game.jpeg)
+**Might you need the skin in the game after all?!**
+
+![Skin in the game](<Skin in the game.jpeg>)
 
 ## The robots beat the humans a long time ago
 
@@ -52,4 +56,6 @@ There was more than one moment at which I was like "damn, computers can totally 
 
 So I'm picking up writing again. As a challenge. Not to beat an AI at it. Do the VR cliff jump all you like. But to have real skin in the game. To experience the real thrill and challenge of putting my thoughts into words.
 
-To **enjoy the game, not the outcome**. !![Enjoy the game](Enjoy the game.jpeg)
+To **enjoy the game, not the outcome**.
+
+![Enjoy the game](Enjoy the game-4697790.jpeg)
