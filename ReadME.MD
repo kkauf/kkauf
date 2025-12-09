@@ -109,6 +109,7 @@ Exact steps depend on your hosting provider.
 
 To publish a new blog post:
 
+**Method 1: Quick Publish (recommended)**
 1. **Create your post** as a markdown file in `blog/` with front matter:
    ```yaml
    ---
@@ -132,6 +133,19 @@ To publish a new blog post:
 
 4. **Publish** (commits and pushes to GitHub):
    ```bash
+   npm run publish
+   ```
+
+**Method 2: Organized Workflow**
+1. **Create your post** in `blog/posts/` with filename format `YYYYMMDD - Post Title.md`
+2. **Add images** to `blog/posts/` directory
+3. **Run organization script**:
+   ```bash
+   npm run reorganize-posts
+   ```
+4. **Test and publish**:
+   ```bash
+   npm run build
    npm run publish
    ```
 
