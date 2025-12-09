@@ -121,7 +121,7 @@ module.exports = function (eleventyConfig) {
     },
     templateFormats: ["njk", "md", "html"],
     htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",
+    markdownTemplateEngine: false,
     // Enable directory-based data files for post folders
     dataTemplateEngine: "njk"
   };

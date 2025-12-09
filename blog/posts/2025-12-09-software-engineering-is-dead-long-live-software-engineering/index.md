@@ -45,7 +45,9 @@ And boy did it get easier!
 
 ## Enter the Product Engineer
 
-![Generated Image December 09, 2025 - 10_23AM](Generated Image December 09, 2025 - 10_23AM.jpeg)The term "Product Engineer" has been around for a while—popularized by companies like Linear and PostHog to describe developers who care deeply about the product "why," not just the code "how." But AI has changed the game. It hasn't just optimized that role; it has democratized it.
+![Generated Image December 09, 2025 - 10_23AM](generated-image-dec-09-10-23am.jpeg)
+
+The term "Product Engineer" has been around for a while—popularized by companies like Linear and PostHog to describe developers who care deeply about the product "why," not just the code "how." But AI has changed the game. It hasn't just optimized that role; it has democratized it.
 
 When I started to build *Kaufmann Health*, the question of whether to build a landing page in anything but my own code did not even cross my mind. I had learned by now how to build a basic responsive web app using React, and learned that Next.js was a thing, and how it would enable me to build even more and even better.
 
@@ -71,7 +73,9 @@ So good, that I don't need my human software engineering friend anymore to valid
 
 ## Long live Software Engineering
 
-![Generated Image December 09, 2025 - 10_24AM](Generated Image December 09, 2025 - 10_24AM.jpeg)But there's a problem, and the critical reader will have had it in mind since reading the first sentence of this essay: "he's going to need proper Software Engineers soon." And that's absolutely correct.
+![Generated Image December 09, 2025 - 10_24AM](generated-image-dec-09-10-24am.jpeg)
+
+But there's a problem, and the critical reader will have had it in mind since reading the first sentence of this essay: "he's going to need proper Software Engineers soon." And that's absolutely correct.
 
 But maybe not for just the reasons you're thinking.
 
@@ -105,4 +109,4 @@ This is possible for low-complexity products. The complexity at which one is abl
 
 But there's always a point at which one needs to delegate—whether the Product Engineer in a cutting-edge company, or a solo entrepreneur bootstrapping a company (if it turns out to gain traction).
 
-![Generated Image December 09, 2025 - 10_26AM](Generated Image December 09, 2025 - 10_26AM.jpeg)
+![Generated Image December 09, 2025 - 10_26AM](generated-image-dec-09-10-26am.jpeg)
