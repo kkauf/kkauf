@@ -110,9 +110,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("firstImageSrc", (content) => {
     if (!content) return "";
-    const match = String(content).match(/<img[^>]+src=\"([^\"]+)\"/i);
+    // Look for img tags within picture elements first, then regular img tags
+    const match = String(content).match(/<picture[^>]*>.*?<img[^>]+src=\"([^\"]+)\"/i) || 
+                String(content).match(/<img[^>]+src=\"([^\"]+)\"/i);
     return match ? match[1] : "";
-  });
+});
 
   return {
     dir: {
