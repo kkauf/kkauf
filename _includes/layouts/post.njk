@@ -25,15 +25,6 @@
   {% if ogType == 'article' %}
   <meta property="article:author" content="Konstantin G. M. Kaufmann">
   {% endif %}
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:description" content="{{ metaDescription }}">
-  {% if socialImagePath %}
-  <meta name="twitter:image" content="{{ site.url }}{{ socialImagePath }}">
-  {% endif %}
-  {% if ogType == 'article' %}
-  <meta name="twitter:creator" content="@kkaufmann">
-  {% endif %}
   {% endif %}
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/css/styles.css">
