@@ -105,6 +105,51 @@ The main site can be deployed to any static host (e.g. GitHub Pages, Netlify, Ve
 
 Exact steps depend on your hosting provider.
 
+## Blog Publishing Runbook
+
+To publish a new blog post:
+
+1. **Create your post** as a markdown file in `blog/` with front matter:
+   ```yaml
+   ---
+   title: Your Post Title
+   layout: layouts/post.njk
+   tags: post
+   date: YYYY-MM-DD
+   description: "Brief description"
+   ---
+   ```
+
+2. **Add images** (if any) to the same `blog/` directory. Reference them in markdown:
+   ```markdown
+   ![Alt text](image-name.jpeg)
+   ```
+
+3. **Test the build**:
+   ```bash
+   npm run build
+   ```
+
+4. **Publish** (commits and pushes to GitHub):
+   ```bash
+   npm run publish
+   ```
+
+### Optional: Post Organization
+
+For better organization, you can move posts into individual folders:
+
+```bash
+npm run reorganize-posts
+```
+
+This converts:
+- `blog/posts/YYYYMMDD - Post Title.md` → `blog/posts/yyyy-mmdd-post-title/index.md`
+- Moves referenced images into each post's folder
+- Updates image paths automatically
+
+**Note**: This only works for posts in `blog/posts/`, not the main `blog/` directory.
+
 ## Contributing
 
 This repo is primarily for personal use, but small fixes (typos, accessibility improvements, etc.) are welcome via pull requests.
