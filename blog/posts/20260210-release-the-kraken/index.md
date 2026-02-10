@@ -37,7 +37,7 @@ All without switching tools. All from one conversation.
 
 The name "Kraken" stuck because that's what it feels like—tentacles reaching into every corner of the business simultaneously. SQL here, a doc there, a code fix over there. One brain, many arms.
 
-{% image "blog/posts/20260210-release-the-kraken/kraken-workspace.jpeg", "Solarpunk illustration of a man at a terminal with luminous tentacles connecting to databases, dashboards, and documents", "(min-width: 40em) 720px, 100vw", [600, 900, 1200] %}
+![Kraken workspace](kraken-workspace.jpeg)
 
 ## SQL Every Morning
 
@@ -96,7 +96,7 @@ That's it. Now when I sit down at my terminal, Claude Code already knows what ha
 
 **Context is infrastructure.** It's not about which AI tool you use. It's about how you organize your information so that *any* tool can pick it up and be useful immediately.
 
-{% image "blog/posts/20260210-release-the-kraken/context-layers.jpeg", "Solarpunk illustration of floating platforms connected by bridges and vines, representing layered context architecture", "(min-width: 40em) 720px, 100vw", [600, 900, 1200] %}
+![Context layers](context-layers.jpeg)
 
 ## The CLAUDE.md Hierarchy
 
