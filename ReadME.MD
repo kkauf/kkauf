@@ -1,6 +1,6 @@
 ### Hi, I'm Konstantin.
 
-I build complex software for businesses that can't afford to get it wrong. Payments, GDPR, data isolation, multi-tenant platforms — the stuff most developers avoid.
+I build complex infrastructure for businesses that can't afford to get it wrong. Payments, GDPR, data isolation, compliance — the stuff most developers avoid.
 
 Former product leader at [N26](https://n26.com) and [Urban Sports Club](https://urbansportsclub.com). Now building [Kaufmann Health](https://kaufmann-health.de), a platform connecting clients with licensed psychotherapists in Germany.
 
