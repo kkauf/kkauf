@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const welcomeLine1 = document.querySelector('#welcome-line-1');
     const welcomeLine2 = document.querySelector('#welcome-line-2');
     const welcomeLine3 = document.querySelector('#welcome-line-3');
+    const welcomeLine4 = document.querySelector('#welcome-line-4');
     const sections = document.querySelectorAll('.fullscreen');
     const aboutSection = document.querySelector('#about');
     const heroCta = document.querySelector('#welcome .availability-cta');
@@ -137,6 +138,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const line1Text = welcomeLine1 ? welcomeLine1.textContent : '';
             const line2Text = welcomeLine2 ? welcomeLine2.textContent : '';
             const line3Text = welcomeLine3 ? welcomeLine3.textContent : '';
+            const line4Text = welcomeLine4 ? welcomeLine4.textContent : '';
 
             const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -172,6 +174,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
             if (welcomeLine3) {
                 await typeWriter(welcomeLine3, line3Text, 12, 0);
+            }
+            if (welcomeLine4) {
+                await typeWriter(welcomeLine4, line4Text, 12, 0);
             }
 
             await delay(250);

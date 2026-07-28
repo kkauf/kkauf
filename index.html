@@ -5,10 +5,10 @@
     <!-- Google tag (gtag.js) moved to footer -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konstantin Kaufmann — Product &amp; Business Leader</title>
+    <title>Konstantin Kaufmann — Product &amp; Business Leader | Syracuse, NY</title>
     <meta
     name="description"
-    content="Product and business leader. Payments and platform at N26 and Urban Sports Club; founder and CEO of Kaufmann Health. Strategy, P&L, and hands-on building.">
+    content="Product and business leader. Payments and platform at N26 and Urban Sports Club; founder and CEO of Kaufmann Health. Strategy, P&L, and hands-on building. Based in Syracuse, NY.">
     
     <!-- Favicon -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -16,15 +16,15 @@
     
     <!-- Open Graph / Social Preview -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Konstantin Kaufmann — Product &amp; Business Leader">
-    <meta property="og:description" content="Product and business leader. Payments and platform at N26 and Urban Sports Club; founder and CEO of Kaufmann Health. Strategy, P&L, and hands-on building.">
+    <meta property="og:title" content="Konstantin Kaufmann — Product &amp; Business Leader | Syracuse, NY">
+    <meta property="og:description" content="Product and business leader. Payments and platform at N26 and Urban Sports Club; founder and CEO of Kaufmann Health. Strategy, P&L, and hands-on building. Based in Syracuse, NY.">
     <meta property="og:image" content="https://kkauf.com/img/25Nov.jpeg">
     <meta property="og:url" content="https://kkauf.com">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Konstantin Kaufmann — Product &amp; Business Leader">
-    <meta name="twitter:description" content="Product and business leader. Payments and platform at N26 and Urban Sports Club; founder and CEO of Kaufmann Health. Strategy, P&L, and hands-on building.">
+    <meta name="twitter:title" content="Konstantin Kaufmann — Product &amp; Business Leader | Syracuse, NY">
+    <meta name="twitter:description" content="Product and business leader. Payments and platform at N26 and Urban Sports Club; founder and CEO of Kaufmann Health. Strategy, P&L, and hands-on building. Based in Syracuse, NY.">
     <meta name="twitter:image" content="https://kkauf.com/img/25Nov.jpeg">
     
     <link rel="preload" href="/fonts/PPNeueMontreal-Book.woff2" as="font" type="font/woff2" crossorigin>
@@ -45,6 +45,7 @@
                 <div class="desktop-menu">
                     <a href="#about">About</a>
                     <a href="#recent-work">Recent Work</a>
+                    <a href="#kaufmann-health">Kaufmann Health</a>
                     <a href="#work">Vita</a>
                     <a href="#contact">Contact</a>
                     <a href="/blog/">Blog</a>
@@ -63,6 +64,7 @@
     <div class="mobile-menu">
         <a href="#about">About</a>
         <a href="#recent-work">Recent Work</a>
+        <a href="#kaufmann-health">Kaufmann Health</a>
         <a href="#work">Vita</a>
         <a href="#contact">Contact</a>
         <a href="/blog/">Blog</a>
@@ -79,6 +81,7 @@
                     <span id="welcome-line-1" class="welcome-line hidden-until-animation">I'm Konstantin — product leader at N26 and Urban Sports Club.</span>
                     <span id="welcome-line-2" class="welcome-line hidden-until-animation">Now founder and CEO of Kaufmann Health, which I built and run end to end.</span>
                     <span id="welcome-line-3" class="welcome-line hidden-until-animation">I lead strategy, own the P&amp;L, and stay hands-on in the product.</span>
+                    <span id="welcome-line-4" class="welcome-line hidden-until-animation">Syracuse, NY (US-East). Open to fractional and full-time product leadership.</span>
                 </h2>
             </div>
             <div class="availability-cta">
@@ -109,6 +112,9 @@
                 <p>
                     My work spans payments, healthcare, and marketplace platforms — domains where getting it wrong has real consequences.
                 </p>
+                <p>
+                    I'm based in Syracuse, New York, and work US-East hours. I'm open to fractional engagements (~20 h/wk) and to full-time product leadership roles.
+                </p>
             </div>
             <div class="image-columns">
                 {% image "img/25Nov.jpeg", "Konstantin G. M. Kaufmann", "(min-width: 40em) 400px, 100vw", [400, 800, 1200] %}
@@ -135,7 +141,7 @@
             </div>
             <div class="content-items-1 recent-work-item">
                 <div class="cv-logos">
-                    <a href="https://kaufmann-health.de" class="logo-link" target="_blank" rel="noopener">{% image "img/Kaufmann_health_logo_large.png", "Kaufmann Health Logo", "(min-width: 40em) 300px, 100vw", [300, 600, 900] %}</a>
+                    <a href="https://kaufmann-health.com" class="logo-link" target="_blank" rel="noopener">{% image "img/Kaufmann_health_logo_large.png", "Kaufmann Health Logo", "(min-width: 40em) 300px, 100vw", [300, 600, 900] %}</a>
                 </div>
                 <div class="text-columns">
                     <h2>Kaufmann Health – Therapy Marketplace</h2>
@@ -164,6 +170,49 @@
         </div>
     </section>
 
+    <section id="kaufmann-health" class="fullscreen">
+        <div class="section-container">
+            <div class="section-header">
+                <h1>Kaufmann Health</h1>
+            </div>
+            <div class="content-items-1">
+                <div class="text-columns">
+                    <p>
+                        Kaufmann Health is a live healthcare platform that connects patients in Germany with body-oriented psychotherapists. I built this platform myself with more than 3,600 production commits since mid-2025.
+                    </p>
+                    <p>
+                        The platform processes health data under GDPR, so I put a lot of effort into access rules and security. That includes row-level security in Postgres with a script that re-checks those rules every day and after every migration. Each push runs a test suite in GitHub Actions and deploys only when it passes. Payments go through Stripe Connect, and for scheduling we use a self-hosted Cal.com instance - this way we rely on externally audited software for critical flows of the app.
+                    </p>
+                    <p>
+                        My strong preference is for decisions to be data-informed wherever possible. As such, my best friend Metabase runs on a self-hosted instance and gives me live data I can run analytics on - including ad-spend via Google Ads, or data fed from Google Search Console.
+                    </p>
+                    <p>
+                        The SaaS-stack I built over time gives therapists a suite of tools, many of them completely free. With those, therapists can showcase their credentials on their practice websites and accept intro-calls through Kaufmann Health, replacing costly tools for them.
+                    </p>
+                    <p>
+                        Patients can browse the therapist registry or get matched with a therapist, upon which they can easily book the first conversation. Email and SMS carry the reminders and follow-ups after that, in German or in English depending on the user, in a fully automated fashion. Therapists get their own automated flow, from signup/onboarding to a subscription that Stripe bills and renews.
+                    </p>
+                </div>
+            </div>
+            <div class="content-items-2">
+                <div class="text-columns">
+                    <p>
+                        The biggest product decision so far was killing my own revenue model. I had launched on commission, taking a cut of each session, but every euro I put into patient acquisition came back as less than a euro of lifetime value, making the model hard to sustain for a bootstrapped platform - though I am convinced the unit economics could have worked out at venture-backed scale. The model was also not appealing to therapists with more established practices, so I moved the business onto subscriptions for therapists and rebuilt billing around them.
+                    </p>
+                    <p>
+                        At present, I recognize funds for marketing and patient-acquisition as bottlenecks for the product to grow, but have decided to limit activities there and rely on organic growth going forward, in order to keep the product true to its core values of a therapist-aligned revenue model.
+                    </p>
+                    <p>
+                        Kaufmann Health has been the project where I could deepen my skills across every part of a business and stay hands-on. After a year of doing every job myself, I am looking to bring those skills into a team again - leading, and getting more done with others than I ever could alone.
+                    </p>
+                </div>
+            </div>
+            <button class="scroll-prompt" type="button" aria-label="Scroll to next section">
+                <span class="arrow-down" aria-hidden="true"></span>
+            </button>
+        </div>
+    </section>
+
     <section id="work" class="fullscreen">
         <div class="section-container">
             <div class="section-header">
@@ -171,11 +220,24 @@
             </div>
         <div class="content-items-1">
             <div class="cv-logos">
+                <a href="https://kaufmann-health.com" class="logo-link">{% image "img/Kaufmann_health_logo_large.png", "Kaufmann Health Logo", "100px", [150, 300] %}</a>
+            </div>
+            <div class="text-columns">
+                <h2>Founder &amp; CEO</h2>
+                <h3>Kaufmann Health · Jun 2025 - Present</h3>
+                <ul>
+                    <li>Built and run a healthcare platform that connects patients in Germany with body-oriented psychotherapists: matching, scheduling, payments, and acquisition.</li>
+                    <li>Own product, engineering, growth, and the P&amp;L, and write the code myself. Stack: Next.js, Supabase, Stripe, Cal.com.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-items-2">
+            <div class="cv-logos">
                 <a href="https://franklin-institute.de/" class="logo-link">{% image "img/Franklin-logo.png", "Franklin Institute of Applied Sciences Logo", "100px", [150, 300] %}</a>
             </div>
             <div class="text-columns">
                 <h2>Head of Academy</h2>
-                <h3>Jul 2023 - Nov 2024</h3>
+                <h3>Franklin Institute · May 2023 - Nov 2024</h3>
                 <ul>
                     <li>Built and led a 12-month Product Management certification program from curriculum design to operations.</li>
                     <li>Recruited and managed 14 coaches and a Customer Success team, serving 150+ students across 10+ courses.</li>
@@ -183,26 +245,26 @@
             </div>
 
         </div>
-        <div class="content-items-2">
+        <div class="content-items-1">
             <div class="cv-logos">
                 <a href="https://paleblue.vc/portfolio/hier" class="logo-link">{% image "img/hier-logo.png", "Hier Foods Logo", "100px", [150, 300] %}</a>
             </div>
             <div class="text-columns">
                 <h2>Lead Product Manager</h2>
-                <h3>May 2022 - Feb 2023</h3>
+                <h3>Hier Foods · May 2022 - Feb 2023</h3>
                 <ul>
                     <li>Built and launched an EDI integration (ISO standard) for supermarket-to-supplier order communication—B2B infrastructure with legacy system constraints.</li>
                     <li>Drove technical integration with enterprise partners while managing product roadmap, recruiting, and engineering team operations.</li>
                 </ul>
             </div>
         </div>
-        <div class="content-items-1">
+        <div class="content-items-2">
             <div class="cv-logos">
                 <a href="https://urbansportsclub.com/en" class="logo-link">{% image "img/UrbanSportsGroup-logo.png", "Urban Sports Group Logo", "100px", [150, 300] %}</a>
             </div>
             <div class="text-columns">
                 <h2>Lead Product Manager — Payments, Platform &amp; Site Reliability</h2>
-                <h3>Apr 2020 - Apr 2022</h3>
+                <h3>Urban Sports Club · Apr 2020 - Apr 2022</h3>
                 <ul>
                     <li>Owned payments, partner payouts, finance, and compliance across two brands. Reduced payment-related fraud by over 92%, saving €2.2M annually.</li>
                     <li>Led the Platform tribe: migrated core infrastructure from AWS to Google Cloud, introduced microservices, and upgraded legacy frameworks (including a PHP version no longer receiving security updates) used by 6+ engineering teams.</li>
@@ -210,25 +272,25 @@
                 </ul>
             </div>
         </div>
-        <div class="content-items-2">
+        <div class="content-items-1">
             <div class="cv-logos">
                 <span class="logo-link">{% image "img/Mendel-foods-logo.png", "Mendel Foods Logo", "100px", [150, 300] %}</span>
             </div>
             <div class="text-columns">
                 <h2>Co-Founder</h2>
-                <h3>Jun 2019 - Feb 2020</h3>
+                <h3>Mendel Foods · Jun 2019 - Feb 2020</h3>
                 <ul>
                     <li>Built an ordering platform for restaurants sourcing from small-scale local suppliers. Global Top 25 in the Pioneer Tournament (Marc Andreessen, Patrick Collison, Stephen Wolfram).</li>
                 </ul>
             </div>
         </div>
-        <div class="content-items-1">
+        <div class="content-items-2">
             <div class="cv-logos">
                 <a href="https://n26.com/en-de" class="logo-link">{% image "img/N26-logo.png", "N26 Logo", "100px", [150, 300] %}</a>
             </div>
             <div class="text-columns">
                 <h2>Product Owner — Cards &amp; Payments</h2>
-                <h3>Apr 2017 - Apr 2019</h3>
+                <h3>N26 · Apr 2017 - Apr 2019</h3>
                 <ul>
                     <li>Promoted four times in two years—from Customer Service to Product Owner leading three payments teams and managing card infrastructure for 3M+ users.</li>
                     <li>Launched Apple Pay and Google Pay across 10+ European markets. Enabled UK and US expansion by making card processing multi-currency. Ensured PSD2 and GDPR compliance.</li>
