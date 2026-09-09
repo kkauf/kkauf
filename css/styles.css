@@ -457,6 +457,8 @@ hr {
     margin-bottom: 0.5rem;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 }
 
 @media (min-width: 40rem) {
@@ -796,6 +798,7 @@ li {
 .primary-cta:focus-visible,
 .secondary-cta:focus-visible,
 .contact-card:focus-visible,
+.work-with-me-option:focus-visible,
 .hamburger-button:focus-visible {
     outline: 2px solid rgba(10, 13, 75, 0.7);
     outline-offset: 4px;
@@ -897,6 +900,78 @@ li {
 
 #recent-work .scroll-prompt {
     margin-top: 1.5rem;
+}
+
+/* Commercial routes from the personal portfolio */
+.work-with-me-section {
+    min-height: auto;
+    background-color: #fff;
+}
+
+.work-with-me-section .section-container {
+    max-width: 68rem;
+    margin-bottom: 0;
+}
+
+.work-with-me-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.work-with-me-option {
+    display: flex;
+    flex-direction: column;
+    padding: 1.75rem;
+    border: 1px solid rgba(10, 13, 75, 0.16);
+    border-radius: 16px;
+    background-color: var(--background-color-light);
+    color: var(--text-color-dark);
+    text-decoration: none;
+}
+
+.work-with-me-primary {
+    background-color: #eaf0ff;
+    border-color: rgba(10, 13, 75, 0.3);
+}
+
+.work-with-me-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.work-with-me-option h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.work-with-me-option p {
+    margin-bottom: 1.5rem;
+}
+
+.work-with-me-link {
+    margin-top: auto;
+    color: var(--link-color);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.work-with-me-option:hover .work-with-me-link {
+    color: var(--text-color-dark);
+}
+
+.work-with-me-employment {
+    align-self: flex-start;
+    margin: 1.5rem 0 0;
+}
+
+@media (max-width: 39.9375rem) {
+    .work-with-me-options {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Contact section  */

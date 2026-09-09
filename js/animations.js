@@ -88,7 +88,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const welcomeLine4 = document.querySelector('#welcome-line-4');
     const sections = document.querySelectorAll('.fullscreen');
     const aboutSection = document.querySelector('#about');
-    const heroCta = document.querySelector('#welcome .availability-cta');
 
     // Allow users to complete the typewriter animation quickly on interaction
     let initialScrollY = window.scrollY || 0;
@@ -122,12 +121,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (welcomeScrollPrompt) {
         welcomeScrollPrompt.style.opacity = '0';
         welcomeScrollPrompt.style.visibility = 'hidden';
-    }
-
-    // Hide hero CTA until after the intro animation
-    if (heroCta) {
-        heroCta.style.opacity = '0';
-        heroCta.style.visibility = 'hidden';
     }
 
     // Welcome animation
@@ -181,7 +174,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             await delay(250);
 
-            // Show scroll prompt, nav, and hero CTA
+            // Show scroll prompt and nav; contact links remain available throughout.
             if (welcomeScrollPrompt && mainNav) {
                 welcomeScrollPrompt.style.transition = 'opacity 0.25s ease, visibility 0.5s ease';
                 welcomeScrollPrompt.style.visibility = 'visible';
@@ -189,12 +182,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 mainNav.style.visibility = 'visible';
                 mainNav.style.opacity = '1';
-            }
-
-            if (heroCta) {
-                heroCta.style.transition = 'opacity 0.25s ease, visibility 0.5s ease';
-                heroCta.style.visibility = 'visible';
-                heroCta.style.opacity = '1';
             }
 
             // Set up click handlers for ALL scroll prompts
