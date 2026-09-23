@@ -22,6 +22,8 @@ async function imageShortcode(src, alt, sizes = "100vw", widths = [400, 800, 120
 }
 
 module.exports = function (eleventyConfig) {
+  // Keep the blog archive in source control without publishing it.
+  eleventyConfig.ignores.add("blog/**");
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
   // Custom markdown-it plugin to transform markdown images to optimized images
