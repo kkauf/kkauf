@@ -10,10 +10,11 @@ Based in New York. More at [kkauf.com](https://kkauf.com).
 
 #### This repo
 
-Source code for my personal site. Vanilla HTML/CSS/JS with an [Eleventy](https://www.11ty.dev/) blog.
+Source code for my personal site. Vanilla HTML/CSS/JS built with [Eleventy](https://www.11ty.dev/).
 
-The blog was unpublished on September 23, 2026. Its source remains in `blog/`,
-excluded from Eleventy output in `.eleventy.js`. Builds clear `_site` first so
+The blog was unpublished and removed from public Git history on September 23,
+2026. A private local archive preserves the originals. The `blog/` directory is
+Git-ignored and excluded from Eleventy output in `.eleventy.js`. Builds clear `_site` first so
 previously generated articles cannot be deployed. A root `404.html` ensures
 removed URLs return a not-found response on Cloudflare Pages.
 

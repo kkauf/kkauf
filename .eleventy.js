@@ -22,7 +22,7 @@ async function imageShortcode(src, alt, sizes = "100vw", widths = [400, 800, 120
 }
 
 module.exports = function (eleventyConfig) {
-  // Keep the blog archive in source control without publishing it.
+  // Never publish locally archived blog material.
   eleventyConfig.ignores.add("blog/**");
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 

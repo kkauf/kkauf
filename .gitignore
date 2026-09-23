@@ -2,3 +2,6 @@ vendor
 .DS_Store
 _site
 node_modules
+
+# Unpublished blog material must stay out of public Git history.
+/blog/
