@@ -210,8 +210,9 @@
             </div>
             <div class="content-items-1">
                 <div class="text-columns">
+                    <a href="https://www.onesomatic.com" class="onesomatic-logo" target="_blank" rel="noopener"><img src="/img/onesomatic-logo.svg" alt="OneSomatic" width="240" height="34"></a>
                     <p>
-                        OneSomatic, called Kaufmann Health in Germany, is a live platform for somatic therapists and their clients. I built it with AI agents, with about 7,000 commits since August 2025.
+                        OneSomatic is a live platform for somatic therapists and their clients. I built it with AI agents, with about 7,000 commits since August 2025.
                     </p>
                     <p>
                         The platform processes health data under GDPR, so I put a lot of effort into access rules and security. That includes row-level security in Postgres with a script that re-checks those rules every day and after every migration. Each push runs a test suite in GitHub Actions and deploys only when it passes. Payments go through Stripe Connect, and for scheduling we use a self-hosted Cal.com instance - this way we rely on externally audited software for critical flows of the app.
@@ -220,20 +221,13 @@
                         My strong preference is for decisions to be data-informed wherever possible. I query the production data directly and track search demand through Google Search Console.
                     </p>
                     <p>
-                        The SaaS-stack I built over time gives therapists a suite of tools, many of them completely free. With those, therapists can showcase their credentials on their practice websites and accept intro-calls through Kaufmann Health, replacing costly tools for them.
+                        The SaaS-stack I built over time gives therapists a suite of tools, many of them completely free. With those, therapists can showcase their credentials on their practice websites and accept intro-calls through OneSomatic, replacing costly tools for them.
                     </p>
                     <p>
                         Patients can browse the therapist registry or get matched with a therapist, upon which they can easily book the first conversation. Email and SMS carry the reminders and follow-ups after that, in German or in English depending on the user, in a fully automated fashion. Therapists get their own automated flow, from signup/onboarding to a subscription that Stripe bills and renews.
                     </p>
-                </div>
-            </div>
-            <div class="content-items-2">
-                <div class="text-columns">
                     <p>
-                        The biggest product decision so far was killing my own revenue model. I had launched on commission, taking a cut of each session. The numbers did not work for a bootstrapped platform, and therapists with established practices did not want the model, so I moved the business onto subscriptions for therapists and rebuilt billing around them.
-                    </p>
-                    <p>
-                        Shipping working products is faster than ever, so the bar for quality and safety has risen. Knowing what to build, orchestrating agents well, deciding what to automate and iterating fast with users are now the hard problems. That is the work I bring to companies that want to move faster with AI without lowering that bar.
+                        <a href="https://www.onesomatic.com" target="_blank" rel="noopener">onesomatic.com</a> · <a href="https://www.onesomatic.com/practitioners" target="_blank" rel="noopener">Practitioner directory</a>
                     </p>
                 </div>
             </div>

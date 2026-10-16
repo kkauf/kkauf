@@ -591,6 +591,20 @@ hr {
     }
 }
 
+/* OneSomatic Section */
+
+.onesomatic-logo {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.onesomatic-logo img {
+    display: block;
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+}
+
 .recent-work-availability {
     margin-top: 2rem;
 }
