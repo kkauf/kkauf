@@ -2,7 +2,7 @@
 
 I build complex infrastructure for businesses that can't afford to get it wrong. Payments, GDPR, data isolation, compliance — the stuff most developers avoid.
 
-AI-native product leader, formerly at [N26](https://n26.com) and [Urban Sports Club](https://urbansportsclub.com). Building [OneSomatic](https://onesomatic.com), software for somatic practitioners in Germany and the US, and [Is AI Conscious Yet?](https://isaiconsciousyet.com).
+Founding Head of Product, formerly at [N26](https://n26.com) and [Urban Sports Club](https://urbansportsclub.com). Building [OneSomatic](https://onesomatic.com), software for somatic practitioners in Germany and the US, and [Is AI Conscious Yet?](https://isaiconsciousyet.com).
 
 Based in Central New York. More at [kkauf.com](https://kkauf.com).
 
