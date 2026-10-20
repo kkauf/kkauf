@@ -1,125 +1,40 @@
-// main.js
-document.addEventListener('DOMContentLoaded', (event) => {
-    const sections = document.querySelectorAll('.fullscreen');
-    let currentSection = 0;
+// kkauf.com: mobile menu and current-section marker in the nav.
+document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.getElementById('nav-links');
 
-    const navLinks = document.querySelectorAll('.main-nav a[href^="#"], .mobile-menu a[href^="#"]');
-
-    function setActiveNavLink(sectionId) {
-        if (!sectionId || !navLinks.length) return;
-        navLinks.forEach(link => {
-            const targetId = link.getAttribute('href') ? link.getAttribute('href').slice(1) : '';
-            link.classList.toggle('active', targetId === sectionId);
-        });
-    }
-
-    function showSection(index) {
-        if (index < 0 || index >= sections.length) return;
-        sections[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    function handleKeydown(event) {
-        const activeElement = document.activeElement;
-        const tagName = activeElement ? activeElement.tagName.toLowerCase() : '';
-        const isTextInput = tagName === 'input' || tagName === 'textarea' || (activeElement && activeElement.isContentEditable);
-
-        if (isTextInput) {
-            return;
-        }
-
-        if ((event.key === 'ArrowDown' || event.key === 'PageDown') && currentSection < sections.length - 1) {
-            event.preventDefault();
-            showSection(currentSection + 1);
-        } else if ((event.key === 'ArrowUp' || event.key === 'PageUp') && currentSection > 0) {
-            event.preventDefault();
-            showSection(currentSection - 1);
-        }
-    }
-
-    window.addEventListener('keydown', handleKeydown);
-
-    // Smooth scroll for navigation tiles
-    document.querySelectorAll('.nav-tiles a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').slice(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-
-    // Animate sections on scroll
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => {
-        if (section.id !== 'welcome') {
-            observer.observe(section);
-        }
-    });
-
-    const activeSectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const section = entry.target;
-                const index = Array.prototype.indexOf.call(sections, section);
-                if (index !== -1) {
-                    currentSection = index;
-                }
-                if (section.id) {
-                    setActiveNavLink(section.id);
-                }
-            }
-        });
-    }, { threshold: 0.6 });
-
-    sections.forEach(section => {
-        activeSectionObserver.observe(section);
-    });
-
-    if (sections.length) {
-        const initialSection = sections[0];
-        if (initialSection.id) {
-            setActiveNavLink(initialSection.id);
-        }
-    }
-
-    // Add hamburger menu functionality
-    const hamburgerButton = document.querySelector('.hamburger-button');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
-
-    if (hamburgerButton && mobileMenu && mobileMenuOverlay) {
-        const toggleMobileMenu = (isOpen) => {
-            const open = typeof isOpen === 'boolean' ? isOpen : !mobileMenu.classList.contains('active');
-
-            mobileMenu.classList.toggle('active', open);
-            mobileMenuOverlay.classList.toggle('active', open);
-            hamburgerButton.classList.toggle('active', open);
-            document.body.classList.toggle('menu-open', open);
-            hamburgerButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (toggle && links) {
+        const setOpen = (open) => {
+            links.classList.toggle('is-open', open);
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            toggle.textContent = open ? 'Close' : 'Menu';
         };
-
-        hamburgerButton.addEventListener('click', () => {
-            toggleMobileMenu();
+        toggle.addEventListener('click', () => setOpen(!links.classList.contains('is-open')));
+        links.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') setOpen(false);
         });
+    }
 
-        mobileMenuOverlay.addEventListener('click', () => {
-            toggleMobileMenu(false);
-        });
+    const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+    const sections = navLinks
+        .map((a) => document.getElementById(a.getAttribute('href').slice(1)))
+        .filter(Boolean);
 
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                toggleMobileMenu(false);
+    if (!('IntersectionObserver' in window) || !sections.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach((a) => {
+                if (a.getAttribute('href') === '#' + entry.target.id) {
+                    a.setAttribute('aria-current', 'true');
+                } else {
+                    a.removeAttribute('aria-current');
+                }
             });
         });
-    }
+    }, { rootMargin: '-45% 0px -50% 0px' });
+
+    sections.forEach((s) => observer.observe(s));
 });

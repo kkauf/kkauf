@@ -2,418 +2,395 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) moved to footer -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konstantin Kaufmann | Fractional Head of Product · AI Product Lead | Cazenovia, NY</title>
     <meta
     name="description"
     content="Fractional Head of Product and AI Product Lead. Fintech, healthcare and B2B marketplaces: N26, Urban Sports Club, and founder of OneSomatic. Based in Cazenovia, NY (near Syracuse).">
-    
-    <!-- Favicon -->
+
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/img/25Nov.jpeg">
-    
-    <!-- Open Graph / Social Preview -->
+
     <meta property="og:type" content="website">
     <meta property="og:title" content="Konstantin Kaufmann | Fractional Head of Product · AI Product Lead | Cazenovia, NY">
     <meta property="og:description" content="Fractional Head of Product and AI Product Lead. Fintech, healthcare and B2B marketplaces: N26, Urban Sports Club, and founder of OneSomatic. Based in Cazenovia, NY (near Syracuse).">
     <meta property="og:image" content="https://kkauf.com/img/25Nov.jpeg">
     <meta property="og:url" content="https://kkauf.com">
-    
-    <!-- Twitter Card -->
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Konstantin Kaufmann | Fractional Head of Product · AI Product Lead | Cazenovia, NY">
     <meta name="twitter:description" content="Fractional Head of Product and AI Product Lead. Fintech, healthcare and B2B marketplaces: N26, Urban Sports Club, and founder of OneSomatic. Based in Cazenovia, NY (near Syracuse).">
     <meta name="twitter:image" content="https://kkauf.com/img/25Nov.jpeg">
-    
+
     <link rel="preload" href="/fonts/PPNeueMontreal-Book.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="preload" href="/fonts/PPNeueMontreal-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
-    <header>
-    <nav class="main-nav">
-        <div class="nav-container">
-            <div class="nav-left">
-                <a href="#welcome">Konstantin G. M. Kaufmann</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="nav" aria-label="Main">
+            <a class="nav-name" href="#welcome">Konstantin G. M. Kaufmann</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+            <div class="nav-links" id="nav-links">
+                <a href="#about">About</a>
+                <a href="#recent-work">Recent work</a>
+                <a href="#onesomatic">OneSomatic</a>
+                <a href="#work">Experience</a>
+                <a href="#work-with-me">Work with me</a>
+                <a href="#contact">Contact</a>
+                <a class="nav-cv" href="/files/konstantin-kaufmann-cv.pdf">CV (PDF)</a>
             </div>
-            
-            <div class="nav-right">
-                <div class="desktop-menu">
-                    <a href="#about">About</a>
-                    <a href="#recent-work">Recent Work</a>
-                    <a href="#onesomatic">OneSomatic</a>
-                    <a href="#work">Vita</a>
-                    <a href="#work-with-me">Work with me</a>
+        </nav>
+    </header>
+
+    <main id="main">
+
+    <section id="welcome" class="hero" aria-labelledby="welcome-h1-text">
+        <div class="wrap hero-grid">
+            <div class="hero-text">
+                <p class="hero-name">Konstantin Kaufmann<span class="hero-title">Fractional Head of Product · AI Product Lead</span></p>
+                <h1 id="welcome-h1-text">I lead product teams and build with AI agents myself.</h1>
+                <div class="hero-lines">
+                    <p id="welcome-line-1">I'm Konstantin, product leader at N26 and Urban Sports Club.</p>
+                    <p id="welcome-line-2">I have built with AI coding agents every day since they arrived in the editor in late 2024: OneSomatic, IsAIConsciousYet.com and more.</p>
+                    <p id="welcome-line-3">I lead strategy, own the P&amp;L, and stay hands-on in the product.</p>
+                    <p id="welcome-line-4">Cazenovia, NY (near Syracuse), US-East hours. Open to fractional and full-time product leadership.</p>
                 </div>
-                
-                <button class="hamburger-button">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div class="actions">
+                    <a class="btn btn-primary" href="/files/konstantin-kaufmann-cv.pdf">Download my CV (PDF)</a>
+                    <a class="btn btn-secondary" href="#contact">Get in touch</a>
+                    <a class="text-link" href="#work-with-me">Work with me</a>
+                </div>
+            </div>
+            <div class="hero-photo">
+                {% image "img/25Nov.jpeg", "Konstantin G. M. Kaufmann", "(min-width: 60em) 340px, 60vw", [400, 800] %}
             </div>
         </div>
-    </nav>
-    
-    <!-- Mobile menu overlay -->
-    <div class="mobile-menu">
-        <a href="#about">About</a>
-        <a href="#recent-work">Recent Work</a>
-        <a href="#onesomatic">OneSomatic</a>
-        <a href="#work">Vita</a>
-        <a href="#work-with-me">Work with me</a>
-    </div>
 
-    <div class="mobile-menu-overlay"></div>
-</header>
-
-    <section id="welcome" class="fullscreen">
-        <div class="section-container">
-            <div class="welcome-hero-card">
-                <h1 id="welcome-h1-text">I lead product teams and build with AI agents myself.</h1>
-                <h2>
-                    <span id="welcome-line-1" class="welcome-line hidden-until-animation">I'm Konstantin — product leader at N26 and Urban Sports Club.</span>
-                    <span id="welcome-line-2" class="welcome-line hidden-until-animation">I have built with AI coding agents every day since they arrived in the editor in late 2024: OneSomatic, Product Radar, isaiconsciousyet.com and more.</span>
-                    <span id="welcome-line-3" class="welcome-line hidden-until-animation">I lead strategy, own the P&amp;L, and stay hands-on in the product.</span>
-                    <span id="welcome-line-4" class="welcome-line hidden-until-animation">Cazenovia, NY (near Syracuse), US-East hours. Open to fractional and full-time product leadership.</span>
-                </h2>
-            </div>
-            <div class="availability-cta">
-                <a href="#contact" class="primary-cta">Get in touch</a>
-                <a href="#work-with-me" class="secondary-cta">Work with me</a>
-            </div>
-            <button class="scroll-prompt" type="button" aria-label="Scroll to next section">
-                <span class="arrow-down" aria-hidden="true"></span>
-            </button>
+        <div class="wrap">
+            <figure class="career" aria-labelledby="career-caption">
+                <figcaption id="career-caption" class="career-caption">Career, 2017 to today</figcaption>
+                <ol class="career-rows">
+                    <li class="career-row" style="--s:101;--e:118;--i:6">
+                        <a href="#exp-onesomatic">
+                            <span class="career-logo"><img src="/img/brand/onesomatic/logo.svg" alt="OneSomatic" class="logo-os" width="684" height="104"></span>
+                            <span class="career-role">Founder<span class="career-dates">Jun 2025 to today</span></span>
+                            <span class="career-track" aria-hidden="true"><span class="career-bar is-current"></span></span>
+                        </a>
+                    </li>
+                    <li class="career-row is-education" style="--s:92;--e:118;--i:5">
+                        <a href="#education">
+                            <span class="career-logo career-logo-text">Quantic</span>
+                            <span class="career-role">Executive MBA<span class="career-dates">Sep 2024 to Oct 2026</span></span>
+                            <span class="career-track" aria-hidden="true"><span class="career-bar"></span></span>
+                        </a>
+                    </li>
+                    <li class="career-row" style="--s:76;--e:95;--i:4">
+                        <a href="#exp-franklin">
+                            <span class="career-logo">{% image "img/logos/franklin.png", "Franklin Institute of Applied Sciences", "160px", [160, 320], "logo-franklin" %}</span>
+                            <span class="career-role">Head of Academy<span class="career-dates">May 2023 to Nov 2024</span></span>
+                            <span class="career-track" aria-hidden="true"><span class="career-bar"></span></span>
+                        </a>
+                    </li>
+                    <li class="career-row" style="--s:64;--e:73;--i:3">
+                        <a href="#exp-hier">
+                            <span class="career-logo">{% image "img/logos/hier.png", "Hier Foods", "80px", [80, 160], "logo-hier" %}</span>
+                            <span class="career-role">Lead Product Manager<span class="career-dates">May 2022 to Jan 2023</span></span>
+                            <span class="career-track" aria-hidden="true"><span class="career-bar"></span></span>
+                        </a>
+                    </li>
+                    <li class="career-row" style="--s:39;--e:64;--i:2">
+                        <a href="#exp-usc">
+                            <span class="career-logo">{% image "img/logos/usc.png", "Urban Sports Club", "120px", [120, 240], "logo-usc" %}</span>
+                            <span class="career-role">Lead Product Manager<span class="career-dates">Apr 2020 to Apr 2022</span></span>
+                            <span class="career-track" aria-hidden="true"><span class="career-bar"></span></span>
+                        </a>
+                    </li>
+                    <li class="career-row" style="--s:29;--e:37;--i:1">
+                        <a href="#exp-mendel">
+                            <span class="career-logo">{% image "img/logos/mendel.png", "Mendel Foods", "160px", [160, 320], "logo-mendel" %}</span>
+                            <span class="career-role">Co-Founder<span class="career-dates">Jun 2019 to Jan 2020</span></span>
+                            <span class="career-track" aria-hidden="true"><span class="career-bar"></span></span>
+                        </a>
+                    </li>
+                    <li class="career-row" style="--s:3;--e:28;--i:0">
+                        <a href="#exp-n26">
+                            <span class="career-logo">{% image "img/logos/n26.png", "N26", "120px", [120, 240], "logo-n26" %}</span>
+                            <span class="career-role">Product Owner, Cards and Payments<span class="career-dates">Apr 2017 to Apr 2019</span></span>
+                            <span class="career-track" aria-hidden="true"><span class="career-bar"></span></span>
+                        </a>
+                    </li>
+                </ol>
+                <div class="career-axis" aria-hidden="true">
+                    <span style="--y:0">2017</span><span style="--y:1">2018</span><span style="--y:2">2019</span><span style="--y:3">2020</span><span style="--y:4">2021</span><span style="--y:5">2022</span><span style="--y:6">2023</span><span style="--y:7">2024</span><span style="--y:8">2025</span><span style="--y:9">2026</span>
+                </div>
+            </figure>
         </div>
     </section>
 
-    <section id="work-with-me" class="fullscreen work-with-me-section" aria-labelledby="work-with-me-heading">
-        <div class="section-container">
-            <div class="section-header">
-                <h2 id="work-with-me-heading">Work with me</h2>
-            </div>
-            <div class="work-with-me-options">
-                <a class="work-with-me-option work-with-me-primary" href="https://kaufmann.earth/">
-                    <span class="work-with-me-label">Kaufmann Earth</span>
+    <section id="work-with-me" class="band band-mist" aria-labelledby="work-with-me-heading">
+        <div class="wrap">
+            <h2 id="work-with-me-heading" class="section-title">Work with me</h2>
+            <div class="options">
+                <a class="option option-primary" href="https://kaufmann.earth/">
+                    <span class="option-org">Kaufmann Earth</span>
                     <h3>Fractional Head of Product</h3>
                     <p>Have early customers and a release that needs an owner? For about 20 hours a week, I work with customers, decide what needs building, and take responsibility for delivery and measurement.</p>
-                    <span class="work-with-me-link">Book fractional work on kaufmann.earth <span aria-hidden="true">&rarr;</span></span>
+                    <span class="option-link">Book fractional work on kaufmann.earth</span>
                 </a>
-                <a class="work-with-me-option" href="https://kaufmann.academy/">
-                    <span class="work-with-me-label">Kaufmann Academy</span>
+                <a class="option" href="https://kaufmann.academy/">
+                    <span class="option-org">Kaufmann Academy</span>
                     <h3>1:1 app mentoring</h3>
                     <p>Building an app with AI? Work with me on getting payments, customer data, and deployment ready for real users. You build; I help you make the decisions and work through the difficult parts.</p>
-                    <span class="work-with-me-link">Explore app mentoring <span aria-hidden="true">&rarr;</span></span>
+                    <span class="option-link">Explore app mentoring</span>
                 </a>
             </div>
-            <p class="work-with-me-employment">Hiring for a product leadership role? <a href="/files/konstantin-kaufmann-cv.pdf">Download my CV (PDF)</a> or <a href="#contact">get in touch.</a></p>
+            <p class="employment-line">Hiring for a product leadership role? <a href="/files/konstantin-kaufmann-cv.pdf">Download my CV (PDF)</a> or <a href="#contact">get in touch.</a></p>
         </div>
     </section>
 
-    <section id="about" class="fullscreen">
-        <div class="section-container">
-            <div class="section-header">
-                <h1>About</h1>
+    <section id="about" class="band" aria-labelledby="about-heading">
+        <div class="wrap about-grid">
+            <div class="about-text">
+                <h2 id="about-heading" class="section-title">About</h2>
+                <p class="lead">I am a product leader with nine years in payments, fintech, healthcare and B2B platforms. I own discovery, scope and delivery for teams that build with AI coding agents, and I set the quality, security and compliance bar they ship against.</p>
+                <p>Since 2025 I have built and run OneSomatic, a live product that handles payments, booking, video and sensitive client data. Every push runs automated tests, and a security audit runs every day.</p>
+                <p>Before that, I was Head of Academy at the Franklin Institute of Applied Sciences in Germany and Lead Product Manager at Hier Foods. At Urban Sports Club I owned member payments and partner payouts. My team cut payment-related fraud 92% in four months, saving over €2.2M (about $2.5M) a year.</p>
+                <p>I started at N26 in customer service and was promoted four times in two years, to Product Owner for cards and payments. There I launched Apple Pay and Google Pay across 10+ European markets for 3M+ users.</p>
             </div>
-        <div class="content-block about-card">
-            <div class="text-columns">
-                <p>
-                    <strong>I lead products and the teams that build them, and I'm hands-on enough to ship the product myself. Strategy, execution, and operations, end to end.</strong>
-                </p>
-                <p>
-                    At N26, I owned payments infrastructure for 3M+ users—incident response, PSD2 compliance, Apple Pay and Google Pay launches across Europe. Promoted four times in two years. At Urban Sports Club, I led payments, platform engineering, and site reliability: fraud detection (92% reduction, €2.2M saved), cloud migrations, legacy system upgrades, and the kind of debugging where money goes missing and someone has to find it.
-                </p>
-                <p>
-                    Since 2025 I have built OneSomatic, software for somatic practitioners in Germany and the US, and I run it across product, engineering, growth and P&amp;L.
-                </p>
-                <p>
-                    My work spans payments, healthcare, and marketplace platforms — domains where getting it wrong has real consequences.
-                </p>
-                <p>
-                    I'm based in Cazenovia, NY (near Syracuse), and work US-East hours. I'm open to fractional engagements (~20 h/wk) and to full-time product leadership roles.
-                </p>
-            </div>
-            <div class="image-columns">
-                {% image "img/25Nov.jpeg", "Konstantin G. M. Kaufmann", "(min-width: 40em) 400px, 100vw", [400, 800, 1200] %}
-            </div>
-        </div>
-        <div class="logo-grid">
-            <a href="https://n26.com/en-de" class="logo-link">{% image "img/N26-logo.png", "N26 Logo", "150px", [150, 300] %}</a>
-            <span class="logo-link">{% image "img/Mendel-foods-logo.png", "Mendel Foods Logo", "150px", [150, 300] %}</span>
-            <a href="https://urbansportsclub.com/en" class="logo-link">{% image "img/UrbanSportsGroup-logo.png", "Urban Sports Group Logo", "150px", [150, 300] %}</a>
-            <a href="https://paleblue.vc/portfolio/hier" class="logo-link">{% image "img/hier-logo.png", "Hier Foods Logo", "150px", [150, 300] %}</a>
-            <a href="https://franklin-institute.de/" class="logo-link">{% image "img/Franklin-logo.png", "Franklin IAS Logo", "150px", [150, 300] %}</a>
-        </div>
-     
-     <button class="scroll-prompt" type="button" aria-label="Scroll to next section">
-        <span class="arrow-down" aria-hidden="true"></span>
-    </button>
-</div>
-    </section>
-
-    <section id="recent-work" class="fullscreen">
-        <div class="section-container">
-            <div class="section-header">
-                <h1>Recent Work</h1>
-            </div>
-            <div class="content-items-1 recent-work-item">
-                <div class="cv-logos">
-                    <a href="https://www.onesomatic.com" class="logo-link" target="_blank" rel="noopener"><img src="/img/onesomatic-logo.svg" alt="OneSomatic Logo" width="240" height="34"></a>
-                </div>
-                <div class="text-columns">
-                    <h2>OneSomatic</h2>
-                    <p>
-                        Software for somatic practitioners. Practitioners run booking, video sessions, invoicing and payments in one place, and clients find them in a verified directory. I built the platform with AI agents and run it on my own. The directory is at <a href="https://www.onesomatic.com/practitioners" target="_blank" rel="noopener">onesomatic.com</a>.
-                    </p>
-                    <p>
-                        Stack: Next.js, Supabase, Cal.com, Stripe, Resend.
-                    </p>
-                </div>
-            </div>
-            <div class="content-items-1 recent-work-item">
-                <div class="text-columns">
-                    <h2>Is AI Conscious Yet?</h2>
-                    <p>
-                        A research site run by AI agents. Each case file covers one event where an AI system did something a plain tool would not. Agents find the sources and draft the file. The rule is that models select and code verifies: a case file goes live only if code finds every quote word for word on the page it links to, and every live quote is checked again each week.
-                    </p>
-                    <p>
-                        <a href="https://isaiconsciousyet.com" target="_blank" rel="noopener">isaiconsciousyet.com</a>
-                    </p>
-                </div>
-            </div>
-            <div class="content-items-2 recent-work-item">
-                <div class="cv-logos">
-                    <span class="logo-link">{% image "img/kampschulte.png", "Kampschulte Logo", "(min-width: 40em) 300px, 100vw", [300, 600] %}</span>
-                </div>
-                <div class="text-columns">
-                    <h2>Health Practitioner Digitization</h2>
-                    <p>
-                        Online course platform and digital infrastructure for an independent health practitioner, combining technical implementation with hands-on project management.
-                    </p>
-                </div>
-            </div>
-            <button class="scroll-prompt" type="button" aria-label="Scroll to next section">
-                <span class="arrow-down" aria-hidden="true"></span>
-            </button>
+            <dl class="facts">
+                <div><dt>Based in</dt><dd>Cazenovia, NY (near Syracuse)</dd></div>
+                <div><dt>Hours</dt><dd>US-East, remote</dd></div>
+                <div><dt>Open to</dt><dd>Fractional engagements (about 20 hours a week) and full-time product leadership roles</dd></div>
+                <div><dt>Status</dt><dd>U.S. Permanent Resident, no sponsorship required</dd></div>
+                <div><dt>Languages</dt><dd>German (native), English (fluent, near-native)</dd></div>
+                <div><dt>CV</dt><dd><a href="/files/konstantin-kaufmann-cv.pdf">AI Product Lead CV (PDF)</a></dd></div>
+            </dl>
         </div>
     </section>
 
-    <section id="onesomatic" class="fullscreen">
-        <div class="section-container">
-            <div class="section-header">
-                <h1>OneSomatic</h1>
-            </div>
-            <div class="content-items-1">
-                <div class="text-columns">
-                    <a href="https://www.onesomatic.com" class="onesomatic-logo" target="_blank" rel="noopener"><img src="/img/onesomatic-logo.svg" alt="OneSomatic" width="240" height="34"></a>
-                    <p>
-                        OneSomatic is a live platform for somatic practitioners and their clients. I built it with AI agents, with about 7,000 commits since August 2025.
-                    </p>
-                    <p>
-                        More than 50 practitioners have signed up, 44 of them with verified profiles. I have my first paying subscribers, and clients have made more than 150 bookings since January 2026.
-                    </p>
-                    <p>
-                        The platform processes health data under GDPR, so I put a lot of effort into access rules and security. Every table and storage bucket carries a data classification, enforced by a failing CI test. Row-level security, grants and SECURITY DEFINER functions in Postgres are audited daily and on every change to a migration. Each push runs a test suite in GitHub Actions and deploys only when it passes. Payments go through Stripe Connect, and for scheduling we use a self-hosted Cal.com instance - this way we rely on externally audited software for critical flows of the app.
-                    </p>
-                    <p>
-                        My strong preference is for decisions to be data-informed wherever possible. I query the production data directly and track search demand through Google Search Console.
-                    </p>
-                    <p>
-                        The SaaS-stack I built over time gives practitioners a suite of tools, many of them completely free. With those, practitioners can showcase their credentials on their practice websites and accept intro-calls through OneSomatic, replacing costly tools for them.
-                    </p>
-                    <p>
-                        Clients can browse the practitioner directory or get matched with a practitioner, upon which they can easily book the first conversation. Email and SMS carry the reminders and follow-ups after that, in German or in English depending on the user, in a fully automated fashion. Practitioners get their own automated flow, from signup/onboarding to a subscription that Stripe bills and renews.
-                    </p>
-                    <p>
-                        <a href="https://www.onesomatic.com" target="_blank" rel="noopener">onesomatic.com</a> · <a href="https://www.onesomatic.com/practitioners" target="_blank" rel="noopener">Practitioner directory</a>
-                    </p>
-                </div>
-            </div>
-            <button class="scroll-prompt" type="button" aria-label="Scroll to next section">
-                <span class="arrow-down" aria-hidden="true"></span>
-            </button>
-        </div>
-    </section>
-
-    <section id="work" class="fullscreen">
-        <div class="section-container">
-            <div class="section-header">
-                <h1>Work</h1>
-            </div>
-        <div class="content-items-1">
-            <div class="cv-logos">
-                <a href="https://www.onesomatic.com" class="logo-link"><img src="/img/onesomatic-symbol.svg" alt="OneSomatic Logo" width="100" height="100"></a>
-            </div>
-            <div class="text-columns">
-                <h2>Founder</h2>
-                <h3>OneSomatic (formerly Kaufmann Health) · Jun 2025 - Present</h3>
-                <ul>
-                    <li>Built software for somatic practitioners in Germany and the US with AI agents: directory, booking, video sessions, invoicing and payments.</li>
-                    <li>Run it across product, engineering, growth and the P&amp;L. Stack: Next.js, Supabase, Stripe, Cal.com.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="content-items-2">
-            <div class="cv-logos">
-                <a href="https://franklin-institute.de/" class="logo-link">{% image "img/Franklin-logo.png", "Franklin Institute of Applied Sciences Logo", "100px", [150, 300] %}</a>
-            </div>
-            <div class="text-columns">
-                <h2>Head of Academy</h2>
-                <h3>Franklin Institute · May 2023 - Nov 2024</h3>
-                <ul>
-                    <li>Built and led a 12-month Product Management certification program from curriculum design to operations.</li>
-                    <li>Recruited and managed 14 coaches and a Customer Success team, serving 150+ students across 10+ courses.</li>
-                </ul>
-            </div>
-
-        </div>
-        <div class="content-items-1">
-            <div class="cv-logos">
-                <a href="https://paleblue.vc/portfolio/hier" class="logo-link">{% image "img/hier-logo.png", "Hier Foods Logo", "100px", [150, 300] %}</a>
-            </div>
-            <div class="text-columns">
-                <h2>Lead Product Manager</h2>
-                <h3>Hier Foods · May 2022 - Jan 2023</h3>
-                <ul>
-                    <li>Built an EDI integration (ISO standard) for supermarket-to-supplier order communication and took it into beta. This was B2B infrastructure with legacy system constraints.</li>
-                    <li>Drove technical integration with enterprise partners while managing product roadmap, recruiting, and engineering team operations.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="content-items-2">
-            <div class="cv-logos">
-                <a href="https://urbansportsclub.com/en" class="logo-link">{% image "img/UrbanSportsGroup-logo.png", "Urban Sports Group Logo", "100px", [150, 300] %}</a>
-            </div>
-            <div class="text-columns">
-                <h2>Lead Product Manager — Payments, Platform &amp; Site Reliability</h2>
-                <h3>Urban Sports Club · Apr 2020 - Apr 2022</h3>
-                <ul>
-                    <li>Owned payments, partner payouts, finance, and compliance across two brands. Reduced payment-related fraud by over 92%, saving €2.2M annually.</li>
-                    <li>Led the Platform tribe: migrated core infrastructure from AWS to Google Cloud, introduced microservices, and upgraded legacy frameworks (including a PHP version no longer receiving security updates) used by 6+ engineering teams.</li>
-                    <li>Oversaw Site Reliability Engineering. When money was missing or transactions didn't reconcile, my team investigated and resolved it.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="content-items-1">
-            <div class="cv-logos">
-                <span class="logo-link">{% image "img/Mendel-foods-logo.png", "Mendel Foods Logo", "100px", [150, 300] %}</span>
-            </div>
-            <div class="text-columns">
-                <h2>Co-Founder</h2>
-                <h3>Mendel Foods · Jun 2019 - Jan 2020</h3>
-                <ul>
-                    <li>Built an ordering platform for restaurants sourcing from small-scale local suppliers. Global Top 25 in the Pioneer Tournament (Marc Andreessen, Patrick Collison, Stephen Wolfram).</li>
-                </ul>
-            </div>
-        </div>
-        <div class="content-items-2">
-            <div class="cv-logos">
-                <a href="https://n26.com/en-de" class="logo-link">{% image "img/N26-logo.png", "N26 Logo", "100px", [150, 300] %}</a>
-            </div>
-            <div class="text-columns">
-                <h2>Product Owner — Cards &amp; Payments</h2>
-                <h3>N26 · Apr 2017 - Apr 2019</h3>
-                <ul>
-                    <li>Promoted four times in two years—from Customer Service to Product Owner leading three payments teams and managing card infrastructure for 3M+ users.</li>
-                    <li>Launched Apple Pay and Google Pay across 10+ European markets. Enabled UK and US expansion by making card processing multi-currency. Ensured PSD2 and GDPR compliance.</li>
-                    <li>Managed major production incidents with direct customer impact. Grew team from 3 to 14. Worked directly with Google, Mastercard, and card processing partners.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="section-header">
-            <h1>Education</h1>
-        </div>
-        <div class="content-items-1">
-            <div class="text-columns">
-                <h2>Executive MBA</h2>
-                <h3>Quantic School of Business and Technology · Sep 2024 - Oct 2026</h3>
-                <ul>
-                    <li>Completed in October 2026 alongside building OneSomatic. Focus on strategic leadership, finance, and data-driven decision-making. Capstone graded 5 out of 5.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="content-items-2">
-            <div class="text-columns">
-                <h2>B.Sc. Economics and Business Economics</h2>
-                <h3>Maastricht University &amp; Université Paris 1 Panthéon-Sorbonne · 2013 - 2017</h3>
-                <ul>
-                    <li>Economics at a Triple Crown-accredited university, with an exchange year at the Sorbonne in Paris.</li>
-                </ul>
-            </div>
-        </div>
-        <button class="scroll-prompt" type="button" aria-label="Scroll to next section">
-            <span class="arrow-down" aria-hidden="true"></span>
-        </button>
-    </div>
-    </section>
-
-    <!-- Contact section -->
-    <section id="contact" class="fullscreen">
-        <div class="section-container">
-            <div class="section-header">
-                <h1>Contact</h1>
-            </div>
-            <div class="contact-intro">
-                <h2>Let's talk</h2>
-                <p>
-                    Whether you're hiring, exploring a role, or just want to connect — here's how to reach me.
-                </p>
-            </div>
-            <div class="content-items-contact slide-in">
-                <a class="contact-card contact-card-primary" href="https://cal.com/kkauf/15min" target="_blank" rel="noopener">
-                    <div class="contact-icon">
-                        <span class="material-icons md-light">
-                            schedule
-                        </span>
+    <section id="recent-work" class="band band-mist" aria-labelledby="recent-work-heading">
+        <div class="wrap">
+            <h2 id="recent-work-heading" class="section-title">Recent work</h2>
+            <div class="entries">
+                <article class="entry">
+                    <div class="entry-rail">
+                        <a href="https://www.onesomatic.com" target="_blank" rel="noopener" class="rail-logo"><img src="/img/brand/onesomatic/logo.svg" alt="OneSomatic" class="logo-os-lg" width="684" height="104"></a>
                     </div>
-                    <div class="contact-text">
-                        <h3>Schedule a call</h3>
-                        <p>
-                            Best if you'd like to talk through a role or an opportunity.
-                        </p>
-                        <span class="contact-cta">Book 15 minutes</span>
+                    <div class="entry-body">
+                        <h3>OneSomatic</h3>
+                        <p>OneSomatic: a verified directory and practice software for somatic practitioners.</p>
+                        <p>I built the platform with AI agents and run it on my own. Stack: Next.js, Supabase, Cal.com, Stripe, Resend.</p>
+                        <p><a href="#onesomatic">More about OneSomatic</a> or visit <a href="https://www.onesomatic.com/practitioners" target="_blank" rel="noopener">onesomatic.com</a></p>
                     </div>
-                </a>
-                <a class="contact-card" href="mailto:kgm@kaufmann.earth">
-                    <div class="contact-icon">
-                        <span class="material-icons md-dark">
-                            mail_outline
-                        </span>
+                </article>
+                <article class="entry">
+                    <div class="entry-rail">
+                        <a href="https://isaiconsciousyet.com" target="_blank" rel="noopener" class="rail-logo rail-logo-iacy"><img src="/img/brand/isaiconsciousyet/icon.svg" alt="IsAIConsciousYet.com" width="48" height="48"></a>
                     </div>
-                    <div class="contact-text">
-                        <h3>Email</h3>
-                        <p>
-                            Reach out about a role, a question, or just to connect.
-                        </p>
-                        <span class="contact-cta">kgm@kaufmann.earth</span>
+                    <div class="entry-body">
+                        <h3>IsAIConsciousYet.com</h3>
+                        <p>A research site run by AI agents. Each case file covers one event where an AI system did something a plain tool would not. Agents find the sources and draft the file. The rule is that models select and code verifies: a case file goes live only if code finds every quote word for word on the page it links to, and every live quote is checked again each week.</p>
+                        <p><a href="https://isaiconsciousyet.com" target="_blank" rel="noopener">IsAIConsciousYet.com</a></p>
                     </div>
-                </a>
-                <a class="contact-card" href="https://www.linkedin.com/in/kkauf/" target="_blank" rel="noopener">
-                    <div class="contact-icon">
-                        <span class="material-icons md-dark">
-                            person_add
-                        </span>
+                </article>
+                <!-- PRODUCT RADAR (hidden until KK reviews it in round 3, 2026-10-20).
+                     To restore: uncomment this article, and in #welcome-line-2 change
+                     "OneSomatic, IsAIConsciousYet.com and more." back to
+                     "OneSomatic, Product Radar, IsAIConsciousYet.com and more."
+                <article class="entry">
+                    <div class="entry-rail"></div>
+                    <div class="entry-body">
+                        <h3>Product Radar</h3>
+                        <p>productradar.org: a regularly updated radar of the tools and practices that matter to AI-enabled builders, in the style of the Thoughtworks Technology Radar.</p>
+                        <p><a href="https://productradar.org" target="_blank" rel="noopener">productradar.org</a></p>
                     </div>
-                    <div class="contact-text">
-                        <h3>LinkedIn</h3>
-                        <p>
-                            Connect, see more of my background, and follow what I am working on.
-                        </p>
-                        <span class="contact-cta">View profile</span>
+                </article>
+                END PRODUCT RADAR -->
+                <article class="entry">
+                    <div class="entry-rail">
+                        <span class="rail-logo">{% image "img/kampschulte.png", "Kampschulte", "160px", [160, 320], "logo-kampschulte" %}</span>
                     </div>
-                </a>
+                    <div class="entry-body">
+                        <h3>Health practitioner digitization</h3>
+                        <p>Online course platform and digital infrastructure for an independent health practitioner, combining technical implementation with hands-on project management.</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <script src="js/main.js"></script>
-    <script src="js/animations.js"></script>
-    <!-- Google tag (gtag.js) -->
+    <section id="onesomatic" class="band" aria-labelledby="onesomatic-heading">
+        <div class="wrap">
+            <h2 id="onesomatic-heading" class="visually-hidden">OneSomatic</h2>
+            <a href="https://www.onesomatic.com" target="_blank" rel="noopener" class="os-mark"><img src="/img/brand/onesomatic/logo.svg" alt="OneSomatic" width="684" height="104"></a>
+            <div class="os-grid">
+                <div class="os-main">
+                    <p class="lead">OneSomatic is the home of somatic practice: a verified directory and practice software for somatic practitioners. It started in Germany in June 2025 as Kaufmann Health, where practitioners use it for booking, video sessions, invoicing and payments. In the US, the directory is live at onesomatic.com, and the practice tools come next.</p>
+                    <p class="os-numbers" id="os-numbers">More than 50 practitioners have signed up, 44 of them with verified profiles. I have my first paying subscribers, and clients have made more than 150 bookings since January 2026.</p>
+                    <p>I built it with AI agents, with about 7,000 commits since August 2025.</p>
+                    <p class="os-links"><a href="https://www.onesomatic.com" target="_blank" rel="noopener">onesomatic.com</a> <a href="https://www.onesomatic.com/practitioners" target="_blank" rel="noopener">Practitioner directory</a></p>
+                </div>
+                <div class="os-detail">
+                    <h3>Security</h3>
+                    <p>The platform processes health data under GDPR, so I put a lot of effort into access rules and security. Every table and storage bucket carries a data classification, enforced by a failing CI test. Row-level security, grants and SECURITY DEFINER functions in Postgres are audited daily and on every change to a migration. Each push runs a test suite in GitHub Actions and deploys only when it passes. Payments go through Stripe Connect, and for scheduling we use a self-hosted Cal.com instance - this way we rely on externally audited software for critical flows of the app.</p>
+                    <h3>Data</h3>
+                    <p>My strong preference is for decisions to be data-informed wherever possible. I query the production data directly and track search demand through Google Search Console.</p>
+                    <h3>Product</h3>
+                    <p>The SaaS-stack I built over time gives practitioners a suite of tools, many of them completely free. With those, practitioners can showcase their credentials on their practice websites and accept intro-calls through OneSomatic, replacing costly tools for them.</p>
+                    <p>Clients can browse the practitioner directory or get matched with a practitioner, upon which they can easily book the first conversation. Email and SMS carry the reminders and follow-ups after that, in German or in English depending on the user, in a fully automated fashion. Practitioners get their own automated flow, from signup/onboarding to a subscription that Stripe bills and renews.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="band band-mist" aria-labelledby="work-heading">
+        <div class="wrap">
+            <h2 id="work-heading" class="section-title">Experience</h2>
+            <div class="entries">
+                <article class="entry" id="exp-onesomatic">
+                    <div class="entry-rail">
+                        <p class="rail-dates">Jun 2025 to today</p>
+                        <a href="https://www.onesomatic.com" class="rail-logo"><img src="/img/brand/onesomatic/symbol.svg" alt="OneSomatic" class="logo-os-symbol" width="120" height="120"></a>
+                    </div>
+                    <div class="entry-body">
+                        <h3>Founder</h3>
+                        <p class="entry-org">OneSomatic (formerly Kaufmann Health)</p>
+                        <ul>
+                            <li>Built software for somatic practitioners in Germany and the US with AI agents: directory, booking, video sessions, invoicing and payments.</li>
+                            <li>Run it across product, engineering, growth and the P&amp;L. Stack: Next.js, Supabase, Stripe, Cal.com.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="entry" id="exp-franklin">
+                    <div class="entry-rail">
+                        <p class="rail-dates">May 2023 to Nov 2024</p>
+                        <a href="https://franklin-institute.de/" class="rail-logo">{% image "img/logos/franklin.png", "Franklin Institute of Applied Sciences", "160px", [160, 320], "logo-franklin" %}</a>
+                    </div>
+                    <div class="entry-body">
+                        <h3>Head of Academy</h3>
+                        <p class="entry-org">Franklin Institute of Applied Sciences, Germany. Certified training for IT product managers.</p>
+                        <ul>
+                            <li>Rose from coach to head of the academy in nine months. Built its 12-month program curriculum.</li>
+                            <li>Recruited, trained and led 14 coaches and the customer success team for more than 150 students. Students rated the coaches above 8.5 on average.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="entry" id="exp-hier">
+                    <div class="entry-rail">
+                        <p class="rail-dates">May 2022 to Jan 2023</p>
+                        <a href="https://paleblue.vc/portfolio/hier" class="rail-logo">{% image "img/logos/hier.png", "Hier Foods", "80px", [80, 160], "logo-hier" %}</a>
+                    </div>
+                    <div class="entry-body">
+                        <h3>Lead Product Manager</h3>
+                        <p class="entry-org">Hier Foods. Order software for regional food producers.</p>
+                        <ul>
+                            <li>Led the enterprise integration with the central EDI team of EDEKA, Germany's largest supermarket group. Took the second product iteration, an EDI link between supermarkets and suppliers, into beta.</li>
+                            <li>Ran customer discovery. Worked with the CPO on the product portfolio and team setup, and took over recruiting, line management, team tooling and rituals.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="entry" id="exp-usc">
+                    <div class="entry-rail">
+                        <p class="rail-dates">Apr 2020 to Apr 2022</p>
+                        <a href="https://urbansportsclub.com/en" class="rail-logo">{% image "img/logos/usc.png", "Urban Sports Club", "120px", [120, 240], "logo-usc" %}</a>
+                    </div>
+                    <div class="entry-body">
+                        <h3>Lead Product Manager</h3>
+                        <p class="entry-org">Urban Sports Club. Sports subscription platform across Europe.</p>
+                        <ul>
+                            <li>Owned member payments and partner payouts across the Urban Sports Club and OneFit brands.</li>
+                            <li>Led the team that cut payment-related fraud 92% in four months, saving over €2.2M (about $2.5M) a year. With Finance, we built dunning emails, a collections process and automatic cancellation.</li>
+                            <li>Led three product teams with 2 product managers and 12 engineers: partner management, payments and payouts, and the platform. Introduced OKRs and supported the due diligence for an investor round. Promoted from Senior Product Manager in Jun 2021.</li>
+                            <li>Led the Platform tribe: moved from AWS to Google Cloud, introduced microservices and upgraded legacy frameworks used by 6+ engineering teams, including an unsupported PHP version. Oversaw site reliability.</li>
+                            <li>Led the redesign of partner management after the merger with OneFit: an internal tool and a self-service portal for partners.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="entry" id="exp-mendel">
+                    <div class="entry-rail">
+                        <p class="rail-dates">Jun 2019 to Jan 2020</p>
+                        <span class="rail-logo">{% image "img/logos/mendel.png", "Mendel Foods", "160px", [160, 320], "logo-mendel" %}</span>
+                    </div>
+                    <div class="entry-body">
+                        <h3>Co-Founder</h3>
+                        <p class="entry-org">Mendel Foods. Sustainable local food wholesale startup.</p>
+                        <ul>
+                            <li>Led field work in regenerative agriculture and product discovery to find a viable business model. Reached the global Top 25 of the Pioneer Tournament and signed several B2B customer LOIs.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="entry" id="exp-n26">
+                    <div class="entry-rail">
+                        <p class="rail-dates">Apr 2017 to Apr 2019</p>
+                        <a href="https://n26.com/en-de" class="rail-logo">{% image "img/logos/n26.png", "N26", "120px", [120, 240], "logo-n26" %}</a>
+                    </div>
+                    <div class="entry-body">
+                        <h3>Product Owner, Cards and Payments</h3>
+                        <p class="entry-org">N26. Mobile-first bank in Europe.</p>
+                        <ul>
+                            <li>Promoted four times in two years, from customer service to Product Owner.</li>
+                            <li>Led card lifecycle and transaction processing for 3M+ users, including major production incidents. Grew the team from 3 to 14 people.</li>
+                            <li>Launched Apple Pay and Google Pay across 10+ European markets. Made card processing multi-currency for the UK and US expansion. Ensured PSD2 and GDPR compliance.</li>
+                            <li>Worked daily with Mastercard and its card processor in Warsaw, and with Apple and Google. Helped choose partners for the UK and US launches, including Visa as the US card network.</li>
+                            <li>Led the redesign of the card home in the N26 app, from user interviews and a design sprint to usability tests, through launch.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+
+            <h2 id="education" class="section-title section-title-sub">Education</h2>
+            <div class="entries">
+                <article class="entry">
+                    <div class="entry-rail"><p class="rail-dates">Sep 2024 to Oct 2026</p></div>
+                    <div class="entry-body">
+                        <h3>Executive MBA</h3>
+                        <p class="entry-org">Quantic School of Business and Technology</p>
+                        <ul>
+                            <li>Completed in October 2026 alongside building OneSomatic. Focus on strategic leadership, finance, and data-driven decision-making. Capstone graded 5 out of 5.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="entry">
+                    <div class="entry-rail"><p class="rail-dates">2013 to 2017</p></div>
+                    <div class="entry-body">
+                        <h3>B.Sc. Economics and Business Economics</h3>
+                        <p class="entry-org">Maastricht University and Université Paris 1 Panthéon-Sorbonne</p>
+                        <ul>
+                            <li>Economics at a Triple Crown-accredited university, with an exchange year at the Sorbonne in Paris.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="band band-ink" aria-labelledby="contact-heading">
+        <div class="wrap contact-grid">
+            <div>
+                <h2 id="contact-heading" class="section-title">Contact</h2>
+                <p class="contact-intro">If you are hiring or want to talk about a role, email me or book a short call.</p>
+                <a class="contact-email" href="mailto:kgm@kaufmann.earth">kgm@kaufmann.earth</a>
+            </div>
+            <ul class="contact-list">
+                <li><a href="https://cal.com/kkauf/15min" target="_blank" rel="noopener"><span class="contact-label">Schedule a call</span><span class="contact-value">Book 15 minutes</span></a></li>
+                <li><a href="https://www.linkedin.com/in/kkauf/" target="_blank" rel="noopener"><span class="contact-label">LinkedIn</span><span class="contact-value">linkedin.com/in/kkauf</span></a></li>
+                <li><a href="/files/konstantin-kaufmann-cv.pdf"><span class="contact-label">CV</span><span class="contact-value">AI Product Lead CV (PDF)</span></a></li>
+                <li><a href="https://kaufmann.earth/"><span class="contact-label">Fractional work</span><span class="contact-value">kaufmann.earth</span></a></li>
+            </ul>
+        </div>
+        <div class="wrap footer-line">
+            <p>Konstantin G. M. Kaufmann, Cazenovia, NY (near Syracuse)</p>
+        </div>
+    </section>
+
+    </main>
+
+    <script src="/js/main.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWGDF1ZTLH"></script>
     <script>
       window.dataLayer = window.dataLayer || [];

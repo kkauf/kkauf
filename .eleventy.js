@@ -5,7 +5,8 @@ const fs = require("fs");
 async function imageShortcode(src, alt, sizes = "100vw", widths = [400, 800, 1200], classes = "") {
   let metadata = await Image(src, {
     widths: widths,
-    formats: ["webp", "jpeg"],
+    // Keep transparency for PNG logos; JPEG fallback would flatten the alpha channel.
+    formats: /\.png$/i.test(src) ? ["webp", "png"] : ["webp", "jpeg"],
     outputDir: "./_site/img/",
     urlPath: "/img/"
   });
