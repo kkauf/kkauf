@@ -409,7 +409,7 @@ ul {
 .career-logo {
     display: flex;
     align-items: center;
-    height: 2rem;
+    height: 2.5rem;
 }
 
 .career-logo img,
@@ -426,8 +426,8 @@ ul {
 /* Optical logo sizes: each mark gets the height that matches the others visually. */
 .logo-os { height: 1.25rem; }
 .logo-franklin { height: 1.875rem; }
-.logo-hier { height: 2rem; }
-.logo-usc { height: 1.875rem; }
+.logo-hier { height: 2.375rem; }
+.logo-usc { height: 2.5rem; }
 .logo-mendel { height: 1rem; }
 .logo-n26 { height: 1.375rem; }
 
