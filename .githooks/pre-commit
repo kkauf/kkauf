@@ -1,0 +1,9 @@
+#!/bin/sh
+# Canon drift check (KK 2026-10-20: "this is easy to set up and to automate").
+# Blocks a commit when kkauf.com or the full-time CV source drifts from
+# public-profile/canon.md. Exit 2 (canon or iCloud path missing) only warns.
+python3 "$HOME/github/Kaufmann.Earth/scripts/canon-check.py" --surfaces kkauf,cv-fulltime
+rc=$?
+if [ $rc -eq 1 ]; then echo "pre-commit: canon drift. Fix the surface or canon.md, then commit." >&2; exit 1; fi
+if [ $rc -ne 0 ]; then echo "pre-commit: canon-check setup error ($rc), commit allowed." >&2; fi
+exit 0
