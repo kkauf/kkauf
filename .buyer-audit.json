@@ -1,0 +1,14 @@
+{
+  "_doc": "Buyer-audit commit gate (KK 2026-10-29). Rules: ~/.agents/skills/buyer-audit/SKILL.md § Gate. First matching rule wins; no match = level none.",
+  "base_url": "http://localhost:8080",
+  "persona_sets": {
+    "fulltime": ["/Users/kkaufmann/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Support/Projects/Kaufmann Earth Consulting/personas/hiring-manager-ai-product.md", "/Users/kkaufmann/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Support/Projects/Kaufmann Earth Consulting/personas/recruiter-screen.md"]
+  },
+  "hosts": {"default": {"personas": "fulltime"}},
+  "default_host": "default",
+  "skip": ["test.js", "scripts/**", "minify-assets.js", ".eleventy.js"],
+  "rules": [
+    {"level": "panel", "kind": "web-page", "personas": "fulltime",
+     "files": ["index.html", "404.html", "_data/**", "_includes/**", "blog/**", "posts/**", "js/main.js"]}
+  ]
+}

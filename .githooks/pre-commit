@@ -6,4 +6,10 @@ python3 "$HOME/github/Kaufmann.Earth/scripts/canon-check.py" --surfaces kkauf,cv
 rc=$?
 if [ $rc -eq 1 ]; then echo "pre-commit: canon drift. Fix the surface or canon.md, then commit." >&2; exit 1; fi
 if [ $rc -ne 0 ]; then echo "pre-commit: canon-check setup error ($rc), commit allowed." >&2; fi
+# Buyer-audit gate (KK 2026-10-29; ~/.agents/skills/buyer-audit/SKILL.md § Gate): public text
+# needs a passing buyer-audit receipt. Reads receipts only, no AI call.
+COPY_GATE="$HOME/.agents/skills/buyer-audit/scripts/copy_gate.py"
+if [ -f .buyer-audit.json ] && [ -f "$COPY_GATE" ]; then
+  python3 "$COPY_GATE" check || exit 1
+fi
 exit 0
