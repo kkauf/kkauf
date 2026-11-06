@@ -1,0 +1,3 @@
+#!/bin/sh
+# Secret scan of the pushed commits (global rule registry, ~/.agents/way-of-working/rules.json).
+exec bash "$HOME/.agents/scripts/secret-scan-pre-push.sh" "$@"
