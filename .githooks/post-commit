@@ -1,0 +1,14 @@
+#!/bin/sh
+# Backup (KK, 2026-10-20; delivery SKILL.md § New repo setup): copy each commit to GitHub in the background.
+# It pushes to refs/backup/<branch>, not to the branch: a push to main deploys some of these sites, so the
+# backup never touches the release path. A failed push (also a rejected one after an amend or rebase)
+# logs an ATTENTION line that ops-sweep job_logs.py surfaces in the next run. Never blocks the commit.
+br=$(git symbolic-ref -q --short HEAD) || exit 0
+repo=$(basename "$(git rev-parse --show-toplevel)")
+LOG="$HOME/Library/Logs/ops-sweep-backup.log"
+(
+  out=$(GIT_TERMINAL_PROMPT=0 git push -q origin "HEAD:refs/backup/$br" 2>&1) ||
+    { mkdir -p "$HOME/Library/Logs"; printf '%s ATTENTION: %s backup push failed: %s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+      "$repo" "$(printf '%s' "$out" | tr '\n' ' ' | cut -c1-200)" >> "$LOG"; }
+) >/dev/null 2>&1 &
+exit 0
