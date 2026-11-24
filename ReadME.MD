@@ -1,23 +1,15 @@
-### Hi, I'm Konstantin.
+### Hi, I'm Konstantin Kaufmann.
 
-I build complex infrastructure for businesses that can't afford to get it wrong. Payments, GDPR, data isolation, compliance — the stuff most developers avoid.
+AI Product Lead | Payments and fintech.
 
-Fractional Head of Product and AI Product Lead, formerly at [N26](https://n26.com) and [Urban Sports Club](https://urbansportsclub.com). Building [OneSomatic](https://onesomatic.com), software for somatic practitioners in Germany and the US, and [IsAIConsciousYet.com](https://isaiconsciousyet.com).
+- **Urban Sports Club**, Lead Product Manager, 2020 - 2022: cut payment-related fraud 92% in four months, saving over EUR 2.2M (about $2.5M) a year.
+- **N26**, Product Owner, Cards and Payments, 2017 - 2019: led product for card payments for more than 3 million users and launched Apple Pay and Google Pay across European markets.
+- **[OneSomatic](https://onesomatic.com)** (formerly Kaufmann Health), Founder, since 2025: a verified directory and practice software for somatic practitioners. Practitioners in Germany use it for booking, video sessions, invoicing and payments. I built it with AI coding agents.
 
-Based in Central New York. More at [kkauf.com](https://kkauf.com).
+#### AI builds
 
----
+- [claude-sessions](https://github.com/kkauf/claude-sessions): open-source tool to search and resume Claude Code sessions.
+- [IsAIConsciousYet.com](https://isaiconsciousyet.com): a research site run by AI agents, where code verifies every quote word for word before a page goes live.
+- [productradar.org](https://productradar.org): a regularly updated radar of the tools and practices that matter to AI-enabled builders, in the style of the Thoughtworks Technology Radar.
 
-#### This repo
-
-Source code for my personal site. Vanilla HTML/CSS/JS built with [Eleventy](https://www.11ty.dev/).
-
-The blog was unpublished and removed from public Git history on September 23,
-2026. A private local archive preserves the originals. The `blog/` directory is
-Git-ignored and excluded from Eleventy output in `.eleventy.js`. Builds clear `_site` first so
-previously generated articles cannot be deployed. A root `404.html` ensures
-removed URLs return a not-found response on Cloudflare Pages.
-
-```bash
-npm install && npm run dev
-```
+Cazenovia, NY (near Syracuse) · [kkauf.com](https://kkauf.com) · [LinkedIn](https://linkedin.com/in/kkauf)
