@@ -5,3 +5,6 @@ node_modules
 
 # Unpublished blog material must stay out of public Git history.
 /blog/
+
+# Buyer-audit gate config: local only, it holds persona paths (2026-11-24).
+/.buyer-audit.json
