@@ -25,6 +25,10 @@ async function imageShortcode(src, alt, sizes = "100vw", widths = [400, 800, 120
 module.exports = function (eleventyConfig) {
   // Never publish locally archived blog material.
   eleventyConfig.ignores.add("blog/**");
+  // Agent instructions and the GitHub profile README are not site pages (2026-11-24).
+  eleventyConfig.ignores.add("AGENTS.md");
+  eleventyConfig.ignores.add("CLAUDE.md");
+  eleventyConfig.ignores.add("ReadME.MD");
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
   // Custom markdown-it plugin to transform markdown images to optimized images
